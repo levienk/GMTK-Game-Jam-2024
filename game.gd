@@ -3,8 +3,10 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	print(WordDictionary.contains("health"))
-	print(WordDictionary.contains("healtt"))
+	pass
+	# These are tests that can be deleted later
+	#print(WordDictionary.contains("health"))
+	#print(WordDictionary.contains("healtt"))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
