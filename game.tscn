@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cv7hyn3xhhpxa"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_56afu"]
+[ext_resource type="PackedScene" uid="uid://bdxxn4b5jg3vh" path="res://text_generation/word_dictionary.tscn" id="2_di4lg"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_56afu")
+
+[node name="WordDictionary" parent="." instance=ExtResource("2_di4lg")]
