@@ -3,9 +3,7 @@
 [ext_resource type="Script" path="res://interface/line_edit.gd" id="1_qcjmj"]
 
 [node name="LineEdit" type="LineEdit"]
-offset_left = 1.0
-offset_top = 58.0
-offset_right = 293.0
-offset_bottom = 199.0
-placeholder_text = "Type new word here..."
+offset_right = 292.0
+offset_bottom = 141.0
+placeholder_text = "Type..."
 script = ExtResource("1_qcjmj")

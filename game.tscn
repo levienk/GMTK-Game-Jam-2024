@@ -1,26 +1,26 @@
-[gd_scene load_steps=4 format=3 uid="uid://cv7hyn3xhhpxa"]
+[gd_scene load_steps=6 format=3 uid="uid://cv7hyn3xhhpxa"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_56afu"]
+[ext_resource type="Texture2D" uid="uid://brhyun46vmtue" path="res://assets/art/background/Background.png" id="2_l3re6"]
 [ext_resource type="PackedScene" uid="uid://xb5j1xux3wyx" path="res://text_generation/text_selector.tscn" id="3_ugllk"]
 [ext_resource type="PackedScene" uid="uid://d1x2db3vo83ac" path="res://monkey/monkey.tscn" id="4_21wsr"]
-[ext_resource type="PackedScene" uid="uid://dpv0hrk0rv4a4" path="res://word_card.tscn" id="4_cx0x1"]
 [ext_resource type="PackedScene" uid="uid://c1ociivssjn43" path="res://interface/line_edit.tscn" id="5_1mtwb"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_56afu")
+
+[node name="Background" type="TextureRect" parent="."]
+texture = ExtResource("2_l3re6")
 
 [node name="TextSelector" parent="." instance=ExtResource("3_ugllk")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
 
-[node name="WordCard" parent="." instance=ExtResource("4_cx0x1")]
-
 [node name="Monkey" parent="." instance=ExtResource("4_21wsr")]
-position = Vector2(195, 112)
-
-[node name="WordCard2" parent="." instance=ExtResource("4_cx0x1")]
-
-[node name="WordCard3" parent="." instance=ExtResource("4_cx0x1")]
+position = Vector2(195, 276)
 
 [node name="LineEdit" parent="." instance=ExtResource("5_1mtwb")]
+offset_top = 280.0
+offset_right = 159.0
+offset_bottom = 360.0
