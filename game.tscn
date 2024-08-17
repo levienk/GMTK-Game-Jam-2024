@@ -15,6 +15,7 @@ script = ExtResource("1_56afu")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
+zoom = Vector2(4, 4)
 
 [node name="WordCard" parent="." instance=ExtResource("4_cx0x1")]
 
