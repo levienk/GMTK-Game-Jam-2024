@@ -500,7 +500,8 @@ vertical_alignment = 1
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -11)
 sprite_frames = SubResource("SpriteFrames_iaowo")
-animation = &"monkey1_frustrated_1_1"
+animation = &"monkey1_typing_1_2"
+autoplay = "monkey1_typing_1_2"
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
