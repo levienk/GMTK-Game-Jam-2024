@@ -32,6 +32,7 @@ func _on_timer_timeout() -> void:
 			random_word += possible_chars.pick_random()
 	
 	if (WordDictionary.contains(random_word)):
+		SignalBus.word_found.emit(random_word)
 		timer.wait_time = valid_time
 	else:
 		timer.wait_time = random_time

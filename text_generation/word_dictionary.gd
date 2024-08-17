@@ -1,4 +1,6 @@
-class_name WordDictionary extends Node
+extends Node
+
+# THIS IS A SINGLETON (global)
 
 # Create an array of valid words
 static var file = FileAccess.open("res://assets/text/dictionary.txt", FileAccess.READ)
