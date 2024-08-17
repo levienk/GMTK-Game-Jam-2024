@@ -873,7 +873,8 @@ vertical_alignment = 1
 [node name="AnimatedMonkey" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -18)
 sprite_frames = SubResource("SpriteFrames_iaowo")
-animation = &"monkey1_frustrated_1_1"
+animation = &"monkey1_typing_1_2"
+autoplay = "monkey1_typing_1_2"
 
 [node name="AnimatedTypewriter" type="AnimatedSprite2D" parent="AnimatedMonkey"]
 position = Vector2(-2, 8)
