@@ -24,3 +24,9 @@ position = Vector2(195, 112)
 [node name="WordCard2" parent="." instance=ExtResource("4_cx0x1")]
 
 [node name="WordCard3" parent="." instance=ExtResource("4_cx0x1")]
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_top = 131.0
+offset_right = 133.0
+offset_bottom = 236.0
+placeholder_text = "test"

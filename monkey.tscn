@@ -861,10 +861,11 @@ script = ExtResource("1_1jxph")
 
 [node name="Label" type="Label" parent="."]
 z_index = 6
-offset_left = -68.0
-offset_top = -56.0
-offset_right = 68.0
-offset_bottom = -33.0
+offset_left = -42.0
+offset_top = -41.0
+offset_right = 41.0
+offset_bottom = -29.0
+theme_override_font_sizes/font_size = 8
 horizontal_alignment = 1
 vertical_alignment = 1
 
