@@ -862,22 +862,22 @@ script = ExtResource("1_1jxph")
 [node name="Label" type="Label" parent="."]
 z_index = 6
 offset_left = -68.0
-offset_top = -49.0
+offset_top = -56.0
 offset_right = 68.0
-offset_bottom = -26.0
+offset_bottom = -33.0
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="WordDictionary" parent="." instance=ExtResource("2_bikho")]
 
 [node name="AnimatedMonkey" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -18)
+position = Vector2(0, -17)
 sprite_frames = SubResource("SpriteFrames_iaowo")
 animation = &"monkey1_typing_1_2"
 autoplay = "monkey1_typing_1_2"
 
 [node name="AnimatedTypewriter" type="AnimatedSprite2D" parent="AnimatedMonkey"]
-position = Vector2(-2, 8)
+position = Vector2(0, 7)
 sprite_frames = SubResource("SpriteFrames_j5pbs")
 autoplay = "default"
 frame_progress = 0.109411
