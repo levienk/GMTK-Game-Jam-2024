@@ -8,7 +8,11 @@ func _ready() -> void:
 	
 	# These are tests for the TextCard, and can be deleted later.
 	
-	$WordCard.set_text("The quick brown fox jumped")
+	$WordCard.set_text("This")
+	
+	$WordCard2.set_text("works")
+	
+	$WordCard3.set_text("well.")
 	
 	
 	

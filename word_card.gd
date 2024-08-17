@@ -1,6 +1,8 @@
 extends CenterContainer
 
 const MARGIN = 12
+var dragging = false
+var touching = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	
@@ -26,3 +28,30 @@ func set_text(text: String):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass
+	
+func _input(event): 
+	# If there's a click, let the user drag.
+	if event is InputEventMouseButton:
+		
+		if event.pressed:
+			
+			dragging = true
+		
+		else:
+			
+			dragging = false
+		
+	elif event is InputEventMouseMotion and touching and dragging:
+		
+		self.position += event.relative
+		
+	# Register C
+
+func _on_mouse_entered() -> void:
+	
+	touching = true
+
+
+func _on_mouse_exited() -> void:
+	
+	touching = false
