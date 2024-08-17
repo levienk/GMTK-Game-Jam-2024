@@ -7,3 +7,7 @@ func _ready() -> void:
 	# These are tests that can be deleted later
 	#print(WordDictionary.contains("health"))
 	#print(WordDictionary.contains("healtt"))
+
+# Ordering (z index)
+# Monkey = 5
+# Label (in Monkey) = 6

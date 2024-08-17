@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://d1x2db3vo83ac"]
+[gd_scene load_steps=15 format=3 uid="uid://d1x2db3vo83ac"]
 
 [ext_resource type="Script" path="res://monkey.gd" id="1_1jxph"]
 [ext_resource type="Texture2D" uid="uid://x2rcpah0kg3e" path="res://assets/art/sprites/Monkey1_typing_1.png" id="2_0gp6x"]
+[ext_resource type="PackedScene" uid="uid://bdxxn4b5jg3vh" path="res://text_generation/word_dictionary.tscn" id="2_bikho"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8g42x"]
 atlas = ExtResource("2_0gp6x")
@@ -82,10 +83,28 @@ animations = [{
 }]
 
 [node name="Monkey" type="Node2D"]
+z_index = 5
 script = ExtResource("1_1jxph")
+
+[node name="Label" type="Label" parent="."]
+z_index = 6
+offset_left = -68.0
+offset_top = -49.0
+offset_right = 68.0
+offset_bottom = -26.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WordDictionary" parent="." instance=ExtResource("2_bikho")]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -11)
 sprite_frames = SubResource("SpriteFrames_iaowo")
 autoplay = "default"
-frame_progress = 0.742449
+frame_progress = 0.186311
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
