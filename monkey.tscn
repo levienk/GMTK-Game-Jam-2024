@@ -709,19 +709,19 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_6k2cc")
 }, {
-"duration": 1.0,
+"duration": 2.0,
 "texture": SubResource("AtlasTexture_5y5cj")
 }, {
-"duration": 1.0,
+"duration": 0.3,
 "texture": SubResource("AtlasTexture_7xak7")
 }, {
-"duration": 1.0,
+"duration": 0.3,
 "texture": SubResource("AtlasTexture_2vfm7")
 }, {
-"duration": 1.0,
+"duration": 0.3,
 "texture": SubResource("AtlasTexture_bjf5g")
 }, {
-"duration": 1.0,
+"duration": 0.3,
 "texture": SubResource("AtlasTexture_6t5c8")
 }, {
 "duration": 1.0,
@@ -739,22 +739,22 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4484t")
 }, {
-"duration": 1.0,
+"duration": 2.0,
 "texture": SubResource("AtlasTexture_6lqm8")
 }, {
-"duration": 1.0,
+"duration": 0.3,
 "texture": SubResource("AtlasTexture_gmp1v")
 }, {
-"duration": 1.0,
+"duration": 0.3,
 "texture": SubResource("AtlasTexture_dpnoo")
 }, {
-"duration": 1.0,
+"duration": 0.3,
 "texture": SubResource("AtlasTexture_hs5ro")
 }, {
-"duration": 1.0,
+"duration": 0.3,
 "texture": SubResource("AtlasTexture_yiupu")
 }, {
-"duration": 1.0,
+"duration": 0.3,
 "texture": SubResource("AtlasTexture_3lved")
 }, {
 "duration": 1.0,
@@ -769,89 +769,89 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_di70n")
 }, {
-"duration": 1.0,
+"duration": 4.0,
 "texture": SubResource("AtlasTexture_vxr36")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kidkg")
 }, {
-"duration": 1.0,
+"duration": 0.75,
 "texture": SubResource("AtlasTexture_goyif")
 }, {
-"duration": 1.0,
+"duration": 0.75,
 "texture": SubResource("AtlasTexture_rrl47")
 }, {
-"duration": 1.0,
+"duration": 0.5,
 "texture": SubResource("AtlasTexture_dbjuu")
 }, {
-"duration": 1.0,
+"duration": 0.5,
 "texture": SubResource("AtlasTexture_qhybx")
 }, {
-"duration": 1.0,
+"duration": 0.5,
 "texture": SubResource("AtlasTexture_2fswy")
 }, {
-"duration": 1.0,
+"duration": 0.25,
 "texture": SubResource("AtlasTexture_2dnke")
 }, {
-"duration": 1.0,
+"duration": 0.25,
 "texture": SubResource("AtlasTexture_ytdgf")
 }, {
-"duration": 1.0,
+"duration": 0.25,
 "texture": SubResource("AtlasTexture_0fexl")
 }, {
-"duration": 1.0,
+"duration": 0.25,
 "texture": SubResource("AtlasTexture_l5h8f")
 }, {
-"duration": 1.0,
+"duration": 0.5,
 "texture": SubResource("AtlasTexture_m3lkw")
 }, {
-"duration": 1.0,
+"duration": 0.5,
 "texture": SubResource("AtlasTexture_gtrp7")
 }, {
-"duration": 1.0,
+"duration": 0.75,
 "texture": SubResource("AtlasTexture_smnb2")
 }, {
-"duration": 1.0,
+"duration": 0.75,
 "texture": SubResource("AtlasTexture_cni8y")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_6jkxr")
 }, {
-"duration": 1.0,
+"duration": 4.0,
 "texture": SubResource("AtlasTexture_5yov8")
 }, {
-"duration": 1.0,
+"duration": 0.4,
 "texture": SubResource("AtlasTexture_3gsuc")
 }, {
-"duration": 1.0,
+"duration": 0.4,
 "texture": SubResource("AtlasTexture_fhs51")
 }, {
-"duration": 1.0,
+"duration": 0.4,
 "texture": SubResource("AtlasTexture_60dof")
 }, {
-"duration": 1.0,
+"duration": 0.4,
 "texture": SubResource("AtlasTexture_a6c4i")
 }, {
-"duration": 1.0,
+"duration": 4.0,
 "texture": SubResource("AtlasTexture_sp23n")
 }, {
-"duration": 1.0,
+"duration": 0.3,
 "texture": SubResource("AtlasTexture_td36t")
 }, {
-"duration": 1.0,
+"duration": 0.3,
 "texture": SubResource("AtlasTexture_380cv")
 }, {
-"duration": 1.0,
+"duration": 0.3,
 "texture": SubResource("AtlasTexture_t4lob")
 }, {
-"duration": 1.0,
+"duration": 0.3,
 "texture": SubResource("AtlasTexture_ig63t")
 }, {
-"duration": 1.0,
+"duration": 0.3,
 "texture": SubResource("AtlasTexture_i5620")
 }],
 "loop": true,
-"name": &"default",
+"name": &"typewriter_moving",
 "speed": 5.0
 }]
 
@@ -877,10 +877,12 @@ animation = &"monkey1_typing_1_2"
 autoplay = "monkey1_typing_1_2"
 
 [node name="AnimatedTypewriter" type="AnimatedSprite2D" parent="AnimatedMonkey"]
-position = Vector2(0, 7)
+position = Vector2(-4, 3)
 sprite_frames = SubResource("SpriteFrames_j5pbs")
-autoplay = "default"
-frame_progress = 0.109411
+animation = &"typewriter_moving"
+autoplay = "typewriter_moving"
+frame = 21
+frame_progress = 0.765886
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
