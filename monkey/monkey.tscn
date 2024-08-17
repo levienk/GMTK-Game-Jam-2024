@@ -1,8 +1,7 @@
-[gd_scene load_steps=122 format=3 uid="uid://d1x2db3vo83ac"]
+[gd_scene load_steps=121 format=3 uid="uid://d1x2db3vo83ac"]
 
-[ext_resource type="Script" path="res://monkey.gd" id="1_1jxph"]
+[ext_resource type="Script" path="res://monkey/monkey.gd" id="1_1jxph"]
 [ext_resource type="Texture2D" uid="uid://x2rcpah0kg3e" path="res://assets/art/sprites/Monkey1_typing_1.png" id="2_0gp6x"]
-[ext_resource type="PackedScene" uid="uid://bdxxn4b5jg3vh" path="res://text_generation/word_dictionary.tscn" id="2_bikho"]
 [ext_resource type="Texture2D" uid="uid://dffsrty0vtxyt" path="res://assets/art/sprites/Monkey1_frustrated_1.png" id="3_l4cj1"]
 [ext_resource type="Texture2D" uid="uid://di08qp820ojf1" path="res://assets/art/sprites/Monkey1_frustrated_2.png" id="4_oq174"]
 [ext_resource type="Texture2D" uid="uid://cr18qgmey03m8" path="res://assets/art/sprites/Monkey1_idle_1.png" id="5_6r76d"]
@@ -868,8 +867,6 @@ offset_bottom = -29.0
 theme_override_font_sizes/font_size = 8
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="WordDictionary" parent="." instance=ExtResource("2_bikho")]
 
 [node name="AnimatedMonkey" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -17)

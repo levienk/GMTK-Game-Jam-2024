@@ -1,15 +1,13 @@
 [gd_scene load_steps=6 format=3 uid="uid://cv7hyn3xhhpxa"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_56afu"]
-[ext_resource type="PackedScene" uid="uid://bdxxn4b5jg3vh" path="res://text_generation/word_dictionary.tscn" id="2_di4lg"]
 [ext_resource type="PackedScene" uid="uid://xb5j1xux3wyx" path="res://text_generation/text_selector.tscn" id="3_ugllk"]
-[ext_resource type="PackedScene" uid="uid://d1x2db3vo83ac" path="res://monkey.tscn" id="4_21wsr"]
+[ext_resource type="PackedScene" uid="uid://d1x2db3vo83ac" path="res://monkey/monkey.tscn" id="4_21wsr"]
 [ext_resource type="PackedScene" uid="uid://dpv0hrk0rv4a4" path="res://word_card.tscn" id="4_cx0x1"]
+[ext_resource type="PackedScene" uid="uid://c1ociivssjn43" path="res://interface/text_edit.tscn" id="5_1mtwb"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_56afu")
-
-[node name="WordDictionary" parent="." instance=ExtResource("2_di4lg")]
 
 [node name="TextSelector" parent="." instance=ExtResource("3_ugllk")]
 
@@ -25,8 +23,4 @@ position = Vector2(195, 112)
 
 [node name="WordCard3" parent="." instance=ExtResource("4_cx0x1")]
 
-[node name="TextEdit" type="TextEdit" parent="."]
-offset_top = 131.0
-offset_right = 133.0
-offset_bottom = 236.0
-placeholder_text = "test"
+[node name="TextEdit" parent="." instance=ExtResource("5_1mtwb")]

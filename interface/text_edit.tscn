@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1ociivssjn43"]
+
+[ext_resource type="Script" path="res://interface/text_edit.gd" id="1_qcjmj"]
+
+[node name="TextEdit" type="TextEdit"]
+offset_top = 131.0
+offset_right = 224.0
+offset_bottom = 236.0
+placeholder_text = "Type new word here..."
+wrap_mode = 1
+script = ExtResource("1_qcjmj")
