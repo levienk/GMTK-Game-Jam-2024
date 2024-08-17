@@ -15,4 +15,3 @@ static func contains(word: String):
 		return true
 	else:
 		return false
-	return dict.has(word)

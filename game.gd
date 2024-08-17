@@ -7,8 +7,3 @@ func _ready() -> void:
 	# These are tests that can be deleted later
 	#print(WordDictionary.contains("health"))
 	#print(WordDictionary.contains("healtt"))
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass

@@ -10,3 +10,6 @@ script = ExtResource("1_56afu")
 [node name="WordDictionary" parent="." instance=ExtResource("2_di4lg")]
 
 [node name="TextSelector" parent="." instance=ExtResource("3_ugllk")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
