@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cr18qgmey03m8"
-path="res://.godot/imported/Monkey1_idle_1.png-36f147056afb16d2e7710c055c0c115a.ctex"
+uid="uid://hyhswrjym8dy"
+path="res://.godot/imported/Typewriter_moving_1.png-e80038220e9c319afc473a0ebe0672a8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/sprites/Monkey1_idle_1.png"
-dest_files=["res://.godot/imported/Monkey1_idle_1.png-36f147056afb16d2e7710c055c0c115a.ctex"]
+source_file="res://assets/art/sprites/Typewriter_moving_1.png"
+dest_files=["res://.godot/imported/Typewriter_moving_1.png-e80038220e9c319afc473a0ebe0672a8.ctex"]
 
 [params]
 
