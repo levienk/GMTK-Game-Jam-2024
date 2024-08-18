@@ -2,7 +2,7 @@ extends Area2D
 
 const size = Vector2(160, 280)
 @onready var collider = $WordBankCollider
-@onready var WordBox = preload("res://interface/word_box.tscn")
+@onready var WordBoxHolder = preload("res://word_box_holder.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -19,6 +19,8 @@ func _ready() -> void:
 	
 	collider.set_shape(collider_shape)
 	
+	$FlowContainer.size = size
+	
 	
 
 
@@ -29,5 +31,7 @@ func _process(delta: float) -> void:
 
 func _on_line_edit_new_word_typed(word: String) -> void:
 	
-	var new_word_box = WordBox.instantiate()
-	add_child(new_word_box)
+	var new_word_container = WordBoxHolder.instantiate()
+	new_word_container.create(word)
+	$FlowContainer.add_child(new_word_container)
+	
