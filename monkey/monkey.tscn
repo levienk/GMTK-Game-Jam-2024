@@ -1,14 +1,44 @@
-[gd_scene load_steps=121 format=3 uid="uid://d1x2db3vo83ac"]
+[gd_scene load_steps=127 format=3 uid="uid://d1x2db3vo83ac"]
 
 [ext_resource type="Script" path="res://monkey/monkey.gd" id="1_1jxph"]
 [ext_resource type="Texture2D" uid="uid://x2rcpah0kg3e" path="res://assets/art/sprites/Monkey1_typing_1.png" id="2_0gp6x"]
+[ext_resource type="Texture2D" uid="uid://6yot83mtmvni" path="res://assets/art/textures/Invalid.png" id="2_dxwj1"]
 [ext_resource type="Texture2D" uid="uid://dffsrty0vtxyt" path="res://assets/art/sprites/Monkey1_frustrated_1.png" id="3_l4cj1"]
+[ext_resource type="Texture2D" uid="uid://jhp5qestp5op" path="res://assets/art/textures/Valid.png" id="3_wdxyq"]
+[ext_resource type="Script" path="res://monkey/text_boundary.gd" id="4_lr3px"]
 [ext_resource type="Texture2D" uid="uid://di08qp820ojf1" path="res://assets/art/sprites/Monkey1_frustrated_2.png" id="4_oq174"]
 [ext_resource type="Texture2D" uid="uid://cr18qgmey03m8" path="res://assets/art/sprites/Monkey1_idle_1.png" id="5_6r76d"]
 [ext_resource type="Texture2D" uid="uid://c7ujsy1cjrr7u" path="res://assets/art/sprites/Monkey1_idle_2.png" id="6_h8lvs"]
 [ext_resource type="Texture2D" uid="uid://dnmgl4y2wo276" path="res://assets/art/sprites/Monkey1_powerup_1.png" id="7_uuv0w"]
 [ext_resource type="Texture2D" uid="uid://djei02dtjk36c" path="res://assets/art/sprites/Monkey1_typing_2.png" id="9_2aik7"]
 [ext_resource type="Texture2D" uid="uid://hyhswrjym8dy" path="res://assets/art/sprites/Typewriter_moving_1.png" id="10_wxr01"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tim7h"]
+atlas = ExtResource("2_dxwj1")
+region = Rect2(0, 0, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m3xrr"]
+atlas = ExtResource("3_wdxyq")
+region = Rect2(0, 0, 48, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e53yk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tim7h")
+}],
+"loop": true,
+"name": &"invalid",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m3xrr")
+}],
+"loop": true,
+"name": &"valid",
+"speed": 5.0
+}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gm7ff"]
 atlas = ExtResource("3_l4cj1")
@@ -858,12 +888,25 @@ animations = [{
 z_index = 5
 script = ExtResource("1_1jxph")
 
-[node name="Label" type="Label" parent="."]
+[node name="TextBoundary" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -33)
+sprite_frames = SubResource("SpriteFrames_e53yk")
+animation = &"invalid"
+script = ExtResource("4_lr3px")
+
+[node name="Label" type="Label" parent="TextBoundary"]
 z_index = 6
-offset_left = -42.0
-offset_top = -41.0
-offset_right = 41.0
-offset_bottom = -29.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -14.0
+offset_right = -4.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_font_sizes/font_size = 8
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -886,4 +929,5 @@ frame_progress = 0.765886
 wait_time = 0.5
 autostart = true
 
+[connection signal="resized" from="TextBoundary/Label" to="TextBoundary" method="_on_label_resized"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

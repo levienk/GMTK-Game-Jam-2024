@@ -12,7 +12,6 @@ const possible_chars = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n",
 var random_word: String
 
 @onready var timer: Timer = $Timer
-@onready var label: Label = $Label
 
 func _on_timer_timeout() -> void:
 	timer.stop()
@@ -38,5 +37,4 @@ func _on_timer_timeout() -> void:
 		timer.wait_time = random_time
 		
 	timer.start()
-	label.text = random_word
-	
+	$TextBoundary/Label.text = random_word
