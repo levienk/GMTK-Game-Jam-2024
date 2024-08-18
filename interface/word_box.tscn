@@ -1,8 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://dv6x0kvxxur1q"]
+[gd_scene load_steps=7 format=3 uid="uid://dv6x0kvxxur1q"]
 
 [ext_resource type="Script" path="res://interface/word_box.gd" id="1_2qhla"]
 [ext_resource type="Texture2D" uid="uid://ci80rhxutmv58" path="res://assets/art/textures/wordbox.png" id="2_tixl6"]
 [ext_resource type="Script" path="res://interface/text_boundary.gd" id="3_yw6rr"]
+[ext_resource type="FontFile" uid="uid://fom1ort0rksd" path="res://assets/fonts/PixelOperator8.ttf" id="4_fdlpd"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_flsi5"]
+font = ExtResource("4_fdlpd")
+font_size = 8
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 0.392157)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v4xee"]
 
@@ -10,10 +18,10 @@
 script = ExtResource("1_2qhla")
 
 [node name="TextBoundary" type="TextureRect" parent="."]
-custom_minimum_size = Vector2(48, 48)
 offset_right = 48.0
 offset_bottom = 48.0
 texture = ExtResource("2_tixl6")
+expand_mode = 2
 script = ExtResource("3_yw6rr")
 
 [node name="Label" type="Label" parent="TextBoundary"]
@@ -27,6 +35,7 @@ offset_right = 34.0
 offset_bottom = 9.0
 grow_vertical = 2
 text = "out fo time"
+label_settings = SubResource("LabelSettings_flsi5")
 vertical_alignment = 1
 
 [node name="WordBoxCollider" type="CollisionShape2D" parent="."]

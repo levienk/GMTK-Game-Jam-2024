@@ -19,7 +19,7 @@ texture = ExtResource("2_l3re6")
 anchor_mode = 0
 
 [node name="Monkey" parent="." instance=ExtResource("4_21wsr")]
-position = Vector2(392, 216)
+position = Vector2(392, 196)
 
 [node name="LineEdit" parent="." instance=ExtResource("5_1mtwb")]
 offset_left = 9.0
@@ -31,10 +31,10 @@ offset_bottom = 360.0
 position = Vector2(224, 215)
 
 [node name="Monkey3" parent="." instance=ExtResource("4_21wsr")]
-position = Vector2(280, 216)
+position = Vector2(376, 120)
 
 [node name="Monkey4" parent="." instance=ExtResource("4_21wsr")]
-position = Vector2(344, 216)
+position = Vector2(247, 112)
 
 [node name="WordBank" parent="." instance=ExtResource("7_x0vgp")]
 

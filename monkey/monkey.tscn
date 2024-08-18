@@ -1,4 +1,4 @@
-[gd_scene load_steps=123 format=3 uid="uid://d1x2db3vo83ac"]
+[gd_scene load_steps=125 format=3 uid="uid://d1x2db3vo83ac"]
 
 [ext_resource type="Script" path="res://monkey/monkey.gd" id="1_1jxph"]
 [ext_resource type="Texture2D" uid="uid://x2rcpah0kg3e" path="res://assets/art/sprites/Monkey1_typing_1.png" id="2_0gp6x"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dnmgl4y2wo276" path="res://assets/art/sprites/Monkey1_powerup_1.png" id="7_uuv0w"]
 [ext_resource type="Texture2D" uid="uid://djei02dtjk36c" path="res://assets/art/sprites/Monkey1_typing_2.png" id="9_2aik7"]
 [ext_resource type="Texture2D" uid="uid://hyhswrjym8dy" path="res://assets/art/sprites/Typewriter_moving_1.png" id="10_wxr01"]
+[ext_resource type="FontFile" uid="uid://fom1ort0rksd" path="res://assets/fonts/PixelOperator8.ttf" id="12_ag1vf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gm7ff"]
 atlas = ExtResource("3_l4cj1")
@@ -856,6 +857,13 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="LabelSettings" id="LabelSettings_whqng"]
+font = ExtResource("12_ag1vf")
+font_size = 8
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 0.392157)
+
 [node name="Monkey" type="Node2D"]
 z_index = 5
 script = ExtResource("1_1jxph")
@@ -903,6 +911,7 @@ offset_bottom = -26.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 8
+label_settings = SubResource("LabelSettings_whqng")
 horizontal_alignment = 1
 vertical_alignment = 1
 
