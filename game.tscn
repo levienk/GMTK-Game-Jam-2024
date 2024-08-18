@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cv7hyn3xhhpxa"]
+[gd_scene load_steps=7 format=3 uid="uid://cv7hyn3xhhpxa"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_56afu"]
 [ext_resource type="Texture2D" uid="uid://brhyun46vmtue" path="res://assets/art/background/Background.png" id="2_l3re6"]
 [ext_resource type="PackedScene" uid="uid://xb5j1xux3wyx" path="res://text_generation/text_selector.tscn" id="3_ugllk"]
 [ext_resource type="PackedScene" uid="uid://d1x2db3vo83ac" path="res://monkey/monkey.tscn" id="4_21wsr"]
 [ext_resource type="PackedScene" uid="uid://c1ociivssjn43" path="res://interface/line_edit.tscn" id="5_1mtwb"]
+[ext_resource type="PackedScene" uid="uid://dv6x0kvxxur1q" path="res://interface/word_box.tscn" id="6_ydu0c"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_56afu")
@@ -25,3 +26,6 @@ offset_left = 9.0
 offset_top = 279.0
 offset_right = 159.0
 offset_bottom = 359.0
+
+[node name="WordBox" parent="." instance=ExtResource("6_ydu0c")]
+position = Vector2(5, 19)
