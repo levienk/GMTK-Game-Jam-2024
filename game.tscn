@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://xb5j1xux3wyx" path="res://text_generation/text_selector.tscn" id="3_ugllk"]
 [ext_resource type="PackedScene" uid="uid://d1x2db3vo83ac" path="res://monkey/monkey.tscn" id="4_21wsr"]
 [ext_resource type="PackedScene" uid="uid://c1ociivssjn43" path="res://interface/line_edit.tscn" id="5_1mtwb"]
-[ext_resource type="PackedScene" uid="uid://dv6x0kvxxur1q" path="res://interface/word_box.tscn" id="6_ydu0c"]
+[ext_resource type="PackedScene" uid="uid://dxewiah0bqiki" path="res://word_bank.tscn" id="7_x0vgp"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_56afu")
@@ -19,7 +19,7 @@ texture = ExtResource("2_l3re6")
 anchor_mode = 0
 
 [node name="Monkey" parent="." instance=ExtResource("4_21wsr")]
-position = Vector2(195, 276)
+position = Vector2(392, 216)
 
 [node name="LineEdit" parent="." instance=ExtResource("5_1mtwb")]
 offset_left = 9.0
@@ -28,13 +28,14 @@ offset_right = 159.0
 offset_bottom = 360.0
 
 [node name="Monkey2" parent="." instance=ExtResource("4_21wsr")]
-position = Vector2(224, 248)
+position = Vector2(224, 215)
 
 [node name="Monkey3" parent="." instance=ExtResource("4_21wsr")]
-position = Vector2(248, 224)
+position = Vector2(280, 216)
 
 [node name="Monkey4" parent="." instance=ExtResource("4_21wsr")]
-position = Vector2(272, 204)
+position = Vector2(344, 216)
 
-[node name="WordBox" parent="." instance=ExtResource("6_ydu0c")]
-position = Vector2(5, 19)
+[node name="WordBank" parent="." instance=ExtResource("7_x0vgp")]
+
+[connection signal="new_word_typed" from="LineEdit" to="WordBank" method="_on_line_edit_new_word_typed"]
