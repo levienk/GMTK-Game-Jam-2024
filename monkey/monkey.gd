@@ -1,5 +1,9 @@
 extends Node2D
 
+# Set textures for the TextBoundary
+static var invalid_texture = load("res://assets/art/textures/Invalid.png")
+static var valid_texture = load("res://assets/art/textures/Valid.png")
+
 static var random_time = 0.5
 static var valid_time = 3.0
 static var valid_word_chance = 0.1
@@ -12,6 +16,7 @@ const possible_chars = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n",
 var random_word: String
 
 @onready var timer: Timer = $Timer
+@onready var text_boundary: NinePatchRect = $TextBoundary
 
 func _on_timer_timeout() -> void:
 	timer.stop()
@@ -33,8 +38,10 @@ func _on_timer_timeout() -> void:
 	if (WordDictionary.contains(random_word)):
 		SignalBus.word_found.emit(random_word)
 		timer.wait_time = valid_time
+		text_boundary.texture = valid_texture
 	else:
 		timer.wait_time = random_time
+		text_boundary.texture = invalid_texture
 		
 	timer.start()
-	$TextBoundary/Label.text = random_word
+	$Label.text = random_word

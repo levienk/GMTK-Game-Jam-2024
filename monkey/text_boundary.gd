@@ -1,13 +1,6 @@
-extends AnimatedSprite2D
-
-const max_length = 140
+extends NinePatchRect
 
 func _on_label_resized() -> void:
-	#if $Label.size.x > max_length:
-		#$Label.clip_text = true
-		#$Label.size.x = max_length
-		#
-	#position = $Label.size
-	#position.x += 16
-	
-	pass
+	size.x = $"../Label".size.x
+	size.x += 2
+	position.x = - size.x / 2

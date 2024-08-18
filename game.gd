@@ -11,4 +11,5 @@ func _ready() -> void:
 
 # Ordering (z index)
 # Monkey = 5
-# Label (in Monkey) = 6
+# Label (in Monkey) = 7
+# TextBoundary (in Monkey) = 6
