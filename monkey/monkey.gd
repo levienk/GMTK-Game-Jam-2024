@@ -11,12 +11,16 @@ static var valid_word_chance = 0.1
 static var valid_word_in_quote_chance = 0.05
 static var max_word_length = 10
 
+static var quote_word_list: Array
 const possible_chars = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n",
 						"o","p","q","r","s","t","u","v","w","x","y","z"]
 var random_word: String
 
 @onready var timer: Timer = $Timer
 @onready var text_boundary: NinePatchRect = $TextBoundary
+
+func _ready() -> void:
+	SignalBus.new_quote_words.connect(_on_new_quote_words)
 
 func _on_timer_timeout() -> void:
 	timer.stop()
@@ -25,8 +29,8 @@ func _on_timer_timeout() -> void:
 	
 	# Generate random word
 	if (rand < valid_word_in_quote_chance):
-		# TODO The word is generated from the quote
-		random_word = WordDictionary.get_random()
+		# The word is generated from the quote
+		random_word = quote_word_list.pick_random()
 	elif (rand < valid_word_chance):
 		# The word is generated from the dictionary
 		random_word = WordDictionary.get_random()
@@ -45,3 +49,7 @@ func _on_timer_timeout() -> void:
 		
 	timer.start()
 	$Label.text = random_word
+
+# SignalBus new_quote_words (from QuoteBox)
+func _on_new_quote_words(words):
+	quote_word_list = words

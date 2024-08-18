@@ -9,8 +9,30 @@ size = Vector2(478.5, 76)
 [node name="QuoteBox" type="Area2D"]
 script = ExtResource("1_g1j5q")
 
+[node name="TextSelector" parent="." instance=ExtResource("2_r0cwj")]
+position = Vector2(-3.57415, -37.6525)
+
 [node name="QuoteBoxCollider" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_2hqu2")
 
-[node name="TextSelector" parent="." instance=ExtResource("2_r0cwj")]
-position = Vector2(-3.57415, -37.6525)
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -233.0
+offset_top = -19.0
+offset_right = 240.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
+text = "O, that this too too solid flesh would melt,
+Thaw and [color=blue]resolve[/color] itself into a dew!
+Or that the Everlasting had not fix’d
+His canon ’gainst self-slaughter! O God! God!
+How weary, stale, flat and unprofitable,
+Seem to me all the uses of this world!"

@@ -21,6 +21,7 @@ func _input(event: InputEvent) -> void:
 		var index = words_not_typed.find(text)
 		# If the user typed a typable word
 		if index != -1:
+			# TODO ADD SCORE
 			words_not_typed.remove_at(index)
 			words_found.append(text)
 			new_word_typed.emit(text)
