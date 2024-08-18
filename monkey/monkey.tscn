@@ -890,7 +890,7 @@ wait_time = 0.5
 autostart = true
 
 [node name="Label" type="Label" parent="."]
-z_index = 7
+z_index = 6
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5

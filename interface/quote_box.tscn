@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cuhl7weq4iso3"]
+
+[ext_resource type="Script" path="res://interface/quote_box.gd" id="1_g1j5q"]
+[ext_resource type="PackedScene" uid="uid://xb5j1xux3wyx" path="res://text_generation/text_selector.tscn" id="2_r0cwj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2hqu2"]
+size = Vector2(478.5, 76)
+
+[node name="QuoteBox" type="Area2D"]
+script = ExtResource("1_g1j5q")
+
+[node name="QuoteBoxCollider" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2hqu2")
+
+[node name="TextSelector" parent="." instance=ExtResource("2_r0cwj")]
+position = Vector2(-3.57415, -37.6525)
