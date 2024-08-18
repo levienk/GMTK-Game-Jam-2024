@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dv6x0kvxxur1q"]
+[gd_scene load_steps=5 format=3 uid="uid://dv6x0kvxxur1q"]
 
 [ext_resource type="Script" path="res://interface/word_box.gd" id="1_2qhla"]
 [ext_resource type="Texture2D" uid="uid://ci80rhxutmv58" path="res://assets/art/textures/wordbox.png" id="2_tixl6"]
 [ext_resource type="Script" path="res://interface/text_boundary.gd" id="3_yw6rr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v4xee"]
 
 [node name="WordBox" type="CharacterBody2D"]
 script = ExtResource("1_2qhla")
@@ -24,9 +26,11 @@ offset_top = -8.0
 offset_right = 34.0
 offset_bottom = 9.0
 grow_vertical = 2
-text = "supercalifragilisticexpi"
+text = "out fo time"
 vertical_alignment = 1
+
+[node name="WordBoxCollider" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_v4xee")
 
 [connection signal="mouse_entered" from="TextBoundary" to="." method="_on_text_boundary_mouse_entered"]
 [connection signal="mouse_exited" from="TextBoundary" to="." method="_on_text_boundary_mouse_exited"]
-[connection signal="resized" from="TextBoundary/Label" to="TextBoundary" method="_on_label_resized"]

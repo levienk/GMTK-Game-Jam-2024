@@ -5,8 +5,9 @@ func _ready() -> void:
 	# These are tests that can be deleted later
 	#print(WordDictionary.contains("health"))
 	#print(WordDictionary.contains("healtt"))
-	pass
 	
+	$WordBox.set_text("Hi!")
+	# pass	
 	
 	
 

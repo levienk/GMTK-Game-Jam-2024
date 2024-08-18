@@ -11,8 +11,28 @@ var newPosition = Vector2()
 
 var mouse_in = false
 
+@onready var collider = $WordBoxCollider
+
 func _ready():
-	pass
+	
+	# Anchor the collider in the center
+	
+	var position = Vector2(
+		$TextBoundary.size.x / 2,
+		$TextBoundary.size.y / 2
+	)
+	collider.set_position(position)
+	
+	# Size the collider to fit the text
+	var size = Vector2(
+		$TextBoundary.size.x - 16,
+		$TextBoundary.size.y - 16
+	)
+	
+	var collider_shape = RectangleShape2D.new()
+	collider_shape.size = size
+	
+	collider.set_shape(collider_shape)
 	
 	
 func _input(event):
@@ -40,3 +60,14 @@ func _on_text_boundary_mouse_entered() -> void:
 
 func _on_text_boundary_mouse_exited() -> void:
 	mouse_in = false
+
+func set_text(text: String) -> void:
+	
+	$TextBoundary/Label.text = text
+	
+	# Yes, both calls are required to update it...
+	$TextBoundary._ready()
+	$TextBoundary._ready()
+	_ready()
+	
+	
