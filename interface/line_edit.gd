@@ -9,7 +9,6 @@ signal new_word_typed(word: String)
 func _ready() -> void:
 	SignalBus.word_found.connect(_on_word_found)
 
-
 # Recieve Signal
 func _on_word_found(word: String):
 	# If the word was not already found
