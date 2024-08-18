@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://dv6x0kvxxur1q"]
+
+[ext_resource type="Script" path="res://interface/word_box.gd" id="1_2qhla"]
+[ext_resource type="Texture2D" uid="uid://ci80rhxutmv58" path="res://assets/art/textures/wordbox.png" id="2_tixl6"]
+[ext_resource type="Script" path="res://interface/text_boundary.gd" id="3_yw6rr"]
+
+[node name="WordBox" type="CharacterBody2D"]
+script = ExtResource("1_2qhla")
+
+[node name="TextBoundary" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(48, 48)
+offset_right = 48.0
+offset_bottom = 48.0
+texture = ExtResource("2_tixl6")
+script = ExtResource("3_yw6rr")
+
+[node name="Label" type="Label" parent="TextBoundary"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 8.0
+offset_top = -8.0
+offset_right = 34.0
+offset_bottom = 9.0
+grow_vertical = 2
+text = "supercalifragilisticexpi"
+vertical_alignment = 1
+
+[connection signal="mouse_entered" from="TextBoundary" to="." method="_on_text_boundary_mouse_entered"]
+[connection signal="mouse_exited" from="TextBoundary" to="." method="_on_text_boundary_mouse_exited"]
+[connection signal="resized" from="TextBoundary/Label" to="TextBoundary" method="_on_label_resized"]
