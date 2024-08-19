@@ -7,14 +7,14 @@
 script = ExtResource("1_5vbw8")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
-offset_right = 160.0
-offset_bottom = 28.0
+z_index = 14
+clip_contents = false
+offset_right = 168.0
+offset_bottom = 144.0
 horizontal_scroll_mode = 0
 vertical_scroll_mode = 2
 
-[node name="FlowContainer" type="HFlowContainer" parent="ScrollContainer"]
-top_level = true
-clip_contents = true
+[node name="HFlowContainer" type="HFlowContainer" parent="ScrollContainer"]
 custom_minimum_size = Vector2(160, 40)
 layout_mode = 2
 script = ExtResource("2_rs8d5")
