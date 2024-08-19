@@ -19,6 +19,7 @@ config/features=PackedStringArray("4.3", "Forward Plus")
 WordDictionary="*res://text_generation/word_dictionary.tscn"
 SignalBus="*res://signal_bus.tscn"
 Bananas="*res://interface/bananas.gd"
+Points="*res://interface/points.gd"
 
 [display]
 

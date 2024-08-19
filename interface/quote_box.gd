@@ -48,7 +48,7 @@ func _on_area_entered(word: String):
 		word_list.erase(word)
 		# The quote has been completed!
 		if word_list.is_empty():
-			# TODO UPDATE SCORE
+			Points.add_point()
 			get_new_quote()
 			return
 		# Change color of quote

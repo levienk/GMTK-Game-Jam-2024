@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://cv7hyn3xhhpxa"]
+[gd_scene load_steps=9 format=3 uid="uid://cv7hyn3xhhpxa"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_56afu"]
 [ext_resource type="Texture2D" uid="uid://brhyun46vmtue" path="res://assets/art/background/Background.png" id="2_l3re6"]
 [ext_resource type="PackedScene" uid="uid://q8qbn8fg2j3l" path="res://interface/bananas.tscn" id="4_7lhl4"]
 [ext_resource type="PackedScene" uid="uid://d1x2db3vo83ac" path="res://monkey/monkey.tscn" id="4_21wsr"]
 [ext_resource type="PackedScene" uid="uid://c1ociivssjn43" path="res://interface/line_edit.tscn" id="5_1mtwb"]
+[ext_resource type="PackedScene" uid="uid://dkgg620vc5iym" path="res://interface/points.tscn" id="5_n2ph4"]
 [ext_resource type="PackedScene" uid="uid://cuhl7weq4iso3" path="res://interface/quote_box.tscn" id="7_12ej7"]
 [ext_resource type="PackedScene" path="res://word_bank.tscn" id="7_x0vgp"]
 
@@ -32,6 +33,9 @@ position = Vector2(247, 112)
 
 [node name="Bananas" parent="Interface" instance=ExtResource("4_7lhl4")]
 position = Vector2(589, 44)
+
+[node name="Points" parent="Interface" instance=ExtResource("5_n2ph4")]
+position = Vector2(609, 85)
 
 [node name="LineEdit" parent="Interface" instance=ExtResource("5_1mtwb")]
 offset_left = 9.0
