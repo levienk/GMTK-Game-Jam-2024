@@ -13,6 +13,7 @@ script = ExtResource("1_5vbw8")
 shape = SubResource("RectangleShape2D_2hqu2")
 
 [node name="FlowContainer" type="FlowContainer" parent="."]
+top_level = true
 clip_contents = true
 offset_right = 40.0
 offset_bottom = 40.0

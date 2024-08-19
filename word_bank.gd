@@ -34,4 +34,5 @@ func _on_line_edit_new_word_typed(word: String) -> void:
 	var new_word_container = WordBoxHolder.instantiate()
 	new_word_container.create(word)
 	$FlowContainer.add_child(new_word_container)
+	$FlowContainer.sort_children()
 	
