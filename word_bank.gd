@@ -1,4 +1,4 @@
-extends Area2D
+extends Node2D
 
 const size = Vector2(160, 280)
 @onready var WordBox = preload("res://interface/word_box.tscn")

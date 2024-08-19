@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://word_bank.gd" id="1_5vbw8"]
 [ext_resource type="Script" path="res://h_flow_container.gd" id="2_rs8d5"]
 
-[node name="WordBank" type="Area2D"]
+[node name="WordBank" type="Node2D"]
 script = ExtResource("1_5vbw8")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
