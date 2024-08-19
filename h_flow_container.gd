@@ -1,6 +1,6 @@
 extends FlowContainer
 
-@onready var WordBoxHolder = preload("res://word_box_holder.tscn")
+@onready var WordBox = preload("res://interface/word_box.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -21,8 +21,8 @@ func sort_children():
 		
 func _sort_by_name(a, b):
 	
-	var text_a = a.get_node("WordBox/TextBoundary/Label").text
-	var text_b = b.get_node("WordBox/TextBoundary/Label").text
+	var text_a = a.get_node("TextBoundary/Label").text
+	var text_b = b.get_node("TextBoundary/Label").text
 	return  text_a < text_b
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

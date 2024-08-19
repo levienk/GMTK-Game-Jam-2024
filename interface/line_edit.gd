@@ -14,6 +14,8 @@ func _on_word_found(word: String):
 	# If the word was not already found
 	if not words_found.has(word) and not words_not_typed.has(word):
 		words_not_typed.append(word)
+		# TODO REMOVE
+		new_word_typed.emit(word)
 	
 # When the user has entered a word
 func _input(event: InputEvent) -> void:
