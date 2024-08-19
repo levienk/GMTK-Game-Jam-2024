@@ -15,8 +15,6 @@
 script = ExtResource("1_56afu")
 
 [node name="Background" type="TextureRect" parent="."]
-offset_right = 640.0
-offset_bottom = 360.0
 texture = ExtResource("2_l3re6")
 
 [node name="MonkeySpawner" type="Node" parent="."]
