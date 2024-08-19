@@ -1,6 +1,6 @@
 extends Area2D
 
-const unwanted_chars = [".",",",":","?",";","\'","!","&","-","/","\"","’","—"]
+const unwanted_chars = [".",",",":","?",";","!","&","-","/","\"","—"]
 
 var word_list: Array
 var quote: String
@@ -40,7 +40,7 @@ func get_new_quote():
 	# Update Monkey quote_word_list
 	SignalBus.new_quote_words.emit(word_list)
 	
-# TODO Change color of words in quote and update word_list when WordBox entered
+# Change color of words in quote and update word_list when WordBox entered
 func _on_area_entered(word: String):
 	# TODO NOT LINKED YET
 	if word_list.has(word):
@@ -52,9 +52,10 @@ func _on_area_entered(word: String):
 			return
 		# Change color of quote
 		var regex = RegEx.new()
-		regex.compile("\b" + word + "\b(?:('|’)(s|t))(?:'|’|!|)")
+		regex.compile("\\b(?i)" + word + "(?-i)\\b(.|,|:|;|\\?|!|'|&|-|—|’|\")?")
 		for result in regex.search_all(quote):
-			pass
+			quote = quote.replace(result.get_string(), "[color=blue]" + result.get_string() + "[/color]")
+			label.bbcode_text = quote
 	
 # Remove duplicates from an array
 func array_unique(array: Array) -> Array:
