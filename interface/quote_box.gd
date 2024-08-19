@@ -35,6 +35,7 @@ func get_new_quote():
 		word_list[index] = word_list[index].to_lower()
 	# Remove doubles of words from word_list
 	word_list = array_unique(word_list)
+	word_list.erase("")
 	print(word_list)
 	
 	# Update Monkey quote_word_list

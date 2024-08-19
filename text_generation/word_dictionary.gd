@@ -3,7 +3,7 @@ extends Node
 # THIS IS A SINGLETON (global)
 
 # Create an array of valid words
-static var file = FileAccess.open("res://assets/text/dictionary.txt", FileAccess.READ)
+static var file = FileAccess.open("res://assets/text/quotes_dictionary.txt", FileAccess.READ)
 static var raw_text = file.get_as_text(true)
 static var dict = raw_text.split("\n")
 	

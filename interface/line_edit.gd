@@ -18,6 +18,9 @@ func _on_word_found(word: String):
 # When the user has entered a word
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("submit"):
+		# Use special apostraphe
+		text = text.replace("\'","’")
+		print(text)
 		var index = words_not_typed.find(text)
 		# If the user typed a typable word
 		if index != -1:
