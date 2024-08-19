@@ -8,5 +8,6 @@ func _ready() -> void:
 		$Label.size.x = max_length
 		
 	size = $Label.size
-	size.x += 8
+	if $Label.size.x > 25:
+		size.x += 16
 	

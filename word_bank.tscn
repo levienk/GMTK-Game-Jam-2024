@@ -1,20 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://dxewiah0bqiki"]
+[gd_scene load_steps=3 format=3 uid="uid://yswp1x6mlj2a"]
 
 [ext_resource type="Script" path="res://word_bank.gd" id="1_5vbw8"]
 [ext_resource type="Script" path="res://h_flow_container.gd" id="2_rs8d5"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2hqu2"]
-size = Vector2(160, 280)
-
 [node name="WordBank" type="Area2D"]
 script = ExtResource("1_5vbw8")
 
-[node name="WordBankCollider" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_2hqu2")
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+offset_right = 160.0
+offset_bottom = 28.0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
 
-[node name="FlowContainer" type="FlowContainer" parent="."]
+[node name="FlowContainer" type="HFlowContainer" parent="ScrollContainer"]
 top_level = true
 clip_contents = true
-offset_right = 40.0
-offset_bottom = 40.0
+custom_minimum_size = Vector2(160, 40)
+layout_mode = 2
 script = ExtResource("2_rs8d5")

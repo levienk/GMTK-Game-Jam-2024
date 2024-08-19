@@ -1,38 +1,36 @@
 extends Area2D
 
 const size = Vector2(160, 280)
-@onready var collider = $WordBankCollider
-@onready var WordBoxHolder = preload("res://word_box_holder.tscn")
+@onready var WordBox = preload("res://interface/word_box.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	
 	# Make the collider the right size, in the right place.
-	var position = Vector2(
-		size.x / 2,
-		size.y / 2
-	)
-	collider.set_position(position)
-	
-	var collider_shape = RectangleShape2D.new()
-	collider_shape.size = size
-	
-	collider.set_shape(collider_shape)
-	
-	$FlowContainer.size = size
-	
-	
+	#var position = Vector2(
+		#size.x / 2,
+		#size.y / 2
+	#)
+	pass
+	#$ScrollContainer.size = size
+	#$ScrollContainer/FlowContainer.size = size
+	#$ScrollContainer/FlowContainer.custom_minimum_size = size
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	print($ScrollContainer.size)
+	print($ScrollContainer.custom_minimum_size)
+	print($ScrollContainer/FlowContainer.size)
+	print($ScrollContainer/FlowContainer.custom_minimum_size)
+	
 	pass
 
 
 func _on_line_edit_new_word_typed(word: String) -> void:
 	
-	var new_word_container = WordBoxHolder.instantiate()
+	var new_word_container = WordBox.instantiate()
 	new_word_container.create(word)
-	$FlowContainer.add_child(new_word_container)
-	$FlowContainer.sort_children()
+	$ScrollContainer/FlowContainer.add_child(new_word_container)
+	$ScrollContainer/FlowContainer.sort_children()
 	
