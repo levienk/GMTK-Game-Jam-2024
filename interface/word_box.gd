@@ -12,3 +12,6 @@ func set_text(text: String) -> void:
 	
 func create(word: String) -> void:
 	set_text(word)
+
+func _pressed() -> void:
+	SignalBus.send_word_to_quote.emit($TextBoundary/Label.text)

@@ -10,15 +10,18 @@ var quote: String
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	get_new_quote()
+	SignalBus.send_word_to_quote.connect(_on_send_word_to_quote)
 	
 func get_new_quote():
 	# Update the level and recieve the quote
-	text_selector.update_level()
-	text_selector.update_level()
-	text_selector.update_level()
-	text_selector.update_level()
-	text_selector.update_level()
-	quote = text_selector.get_random_quote()
+	if Points.points == 16:
+		quote = "You win!"
+	# Update every two points, and not when the game first launches
+	elif Points.points % 2 == 0 && Points.points != 0:
+		text_selector.update_level()
+		quote = text_selector.get_random_quote()
+	else:
+		quote = text_selector.get_random_quote()
 	label.bbcode_text = quote
 	
 	# Create a list of words
@@ -41,9 +44,9 @@ func get_new_quote():
 	# Update Monkey quote_word_list
 	SignalBus.new_quote_words.emit(word_list)
 	
+# From SignalBus WordBox button
 # Change color of words in quote and update word_list when WordBox entered
-func _on_area_entered(word: String):
-	# TODO NOT LINKED YET
+func _on_send_word_to_quote(word: String):
 	if word_list.has(word):
 		word_list.erase(word)
 		# The quote has been completed!
