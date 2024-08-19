@@ -25,8 +25,8 @@ func _ready():
 	
 	# Size the collider to fit the text
 	var size = Vector2(
-		$TextBoundary.size.x - 16,
-		$TextBoundary.size.y - 16
+		$TextBoundary.size.x - 2,
+		$TextBoundary.size.y - 4
 	)
 	
 	var collider_shape = RectangleShape2D.new()

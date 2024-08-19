@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d1x2db3vo83ac" path="res://monkey/monkey.tscn" id="4_21wsr"]
 [ext_resource type="PackedScene" uid="uid://c1ociivssjn43" path="res://interface/line_edit.tscn" id="5_1mtwb"]
 [ext_resource type="PackedScene" uid="uid://cuhl7weq4iso3" path="res://interface/quote_box.tscn" id="7_12ej7"]
-[ext_resource type="PackedScene" path="res://word_bank.tscn" id="7_x0vgp"]
+[ext_resource type="PackedScene" uid="uid://dxewiah0bqiki" path="res://word_bank.tscn" id="7_x0vgp"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_56afu")

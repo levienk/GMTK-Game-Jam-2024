@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dv6x0kvxxur1q" path="res://interface/word_box.tscn" id="2_3bvp7"]
 
 [node name="WordBoxHolder" type="CenterContainer"]
+z_index = 10
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
