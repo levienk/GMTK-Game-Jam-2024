@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://d0rijm254wi7t"]
+[gd_scene load_steps=8 format=3 uid="uid://b0vc8gf7sdnhx"]
 
 [ext_resource type="PackedScene" uid="uid://crtew8dttcvtd" path="res://interface/shop_buttons/monkey_button.tscn" id="1_7b1uk"]
 [ext_resource type="Script" path="res://interface/shop_box.gd" id="1_c07bq"]
@@ -39,10 +39,10 @@ offset_right = 72.0
 offset_bottom = 46.0
 
 [node name="MonkeyButton" parent="." instance=ExtResource("1_7b1uk")]
-offset_left = 272.0
-offset_top = -58.0
-offset_right = 293.0
-offset_bottom = -26.0
+offset_left = 270.0
+offset_top = -63.0
+offset_right = 291.0
+offset_bottom = -41.0
 
 [node name="SpeedButton" parent="." instance=ExtResource("4_k3r1t")]
 offset_left = 105.0
