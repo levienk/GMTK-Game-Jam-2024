@@ -1,16 +1,17 @@
-[gd_scene load_steps=12 format=3 uid="uid://cv7hyn3xhhpxa"]
+[gd_scene load_steps=13 format=3 uid="uid://cv7hyn3xhhpxa"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_56afu"]
 [ext_resource type="Texture2D" uid="uid://brhyun46vmtue" path="res://assets/art/background/Background.png" id="2_l3re6"]
 [ext_resource type="Script" path="res://monkey/monkey_spawner.gd" id="3_etdxv"]
 [ext_resource type="PackedScene" uid="uid://q8qbn8fg2j3l" path="res://interface/bananas.tscn" id="4_7lhl4"]
-[ext_resource type="PackedScene" uid="uid://d1x2db3vo83ac" path="res://monkey/monkey.tscn" id="4_21wsr"]
 [ext_resource type="PackedScene" uid="uid://crtew8dttcvtd" path="res://interface/shop_buttons/monkey_button.tscn" id="4_nytqr"]
 [ext_resource type="PackedScene" uid="uid://c1ociivssjn43" path="res://interface/line_edit.tscn" id="5_1mtwb"]
 [ext_resource type="PackedScene" uid="uid://dkgg620vc5iym" path="res://interface/points.tscn" id="5_n2ph4"]
 [ext_resource type="PackedScene" uid="uid://cfysk3jibfisb" path="res://interface/shop_buttons/auto_move_button.tscn" id="6_dovn3"]
 [ext_resource type="PackedScene" uid="uid://cuhl7weq4iso3" path="res://interface/quote_box.tscn" id="7_12ej7"]
 [ext_resource type="PackedScene" uid="uid://yswp1x6mlj2a" path="res://word_bank.tscn" id="7_x0vgp"]
+[ext_resource type="PackedScene" uid="uid://b3vvy3yoajmuo" path="res://interface/shop_buttons/intellect_button.tscn" id="7_xh8kw"]
+[ext_resource type="PackedScene" uid="uid://hotnvkxdrx8c" path="res://interface/shop_buttons/speed_button.tscn" id="7_xqb2u"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_56afu")
@@ -20,18 +21,6 @@ texture = ExtResource("2_l3re6")
 
 [node name="MonkeySpawner" type="Node" parent="."]
 script = ExtResource("3_etdxv")
-
-[node name="Monkey" parent="MonkeySpawner" instance=ExtResource("4_21wsr")]
-position = Vector2(392, 196)
-
-[node name="Monkey2" parent="MonkeySpawner" instance=ExtResource("4_21wsr")]
-position = Vector2(224, 215)
-
-[node name="Monkey3" parent="MonkeySpawner" instance=ExtResource("4_21wsr")]
-position = Vector2(376, 120)
-
-[node name="Monkey4" parent="MonkeySpawner" instance=ExtResource("4_21wsr")]
-position = Vector2(247, 112)
 
 [node name="Interface" type="Node" parent="."]
 
@@ -45,11 +34,21 @@ offset_bottom = 124.0
 
 [node name="AutoMoveButton" parent="Interface/Shop" instance=ExtResource("6_dovn3")]
 offset_left = 591.0
-offset_top = 162.0
+offset_top = 295.0
 offset_right = 623.0
-offset_bottom = 194.0
-price = 5000
-level_2_price = 7000
+offset_bottom = 327.0
+
+[node name="IntellectButton" parent="Interface/Shop" instance=ExtResource("7_xh8kw")]
+offset_left = 591.0
+offset_top = 225.0
+offset_right = 623.0
+offset_bottom = 257.0
+
+[node name="SpeedButton" parent="Interface/Shop" instance=ExtResource("7_xqb2u")]
+offset_left = 590.0
+offset_top = 165.0
+offset_right = 622.0
+offset_bottom = 197.0
 
 [node name="Bananas" parent="Interface" instance=ExtResource("4_7lhl4")]
 position = Vector2(589, 44)

@@ -4,11 +4,11 @@ extends Node2D
 static var invalid_texture = load("res://assets/art/textures/Invalid.png")
 static var valid_texture = load("res://assets/art/textures/Valid.png")
 
-static var random_time = 0.5
-static var valid_time = 3.0
+static var random_time = 1
+static var valid_time = 6.0
 static var valid_word_chance = 0.1
 # Must be less than valid_word_chance
-static var valid_word_in_quote_chance = 0.05
+static var valid_word_in_quote_chance = 0.02
 static var max_word_length = 10
 
 static var quote_word_list: Array

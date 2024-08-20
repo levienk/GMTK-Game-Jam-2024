@@ -3,28 +3,30 @@ extends TextureButton
 @onready var price_label: Label = $Price
 @onready var description_label: Label = $Description
 
-@export var price = 3000
-@export var level_2_price = 7000
+@export var price = 500
+@export var level_2_price = 3000
 var level = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	price_label.text = str(price)
-	tooltip_text = "Automate typing words"
+	tooltip_text = "2x monkey typing speed"
 
 func _pressed() -> void:
 	if Bananas.subtract_score(price) and level == 1:
-		SignalBus.auto_1_enabled.emit()
+		Monkey.random_time /= 2
+		Monkey.valid_time /= 2
 		level += 1
 		level_up()
 	elif Bananas.subtract_score(price) and level == 2:
-		SignalBus.auto_2_enabled.emit()
+		Monkey.random_time /= 2
+		Monkey.valid_time /= 2
 		modulate.a = .5
 		disabled = true
 
 func level_up():
-	texture_normal = load("res://assets/art/sprites/Auto_2.png")
+	texture_normal = load("res://assets/art/sprites/Speed_2.png")
 	price = level_2_price
 	price_label.text = str(price)
-	description_label.text = "Auto 2"
-	tooltip_text = "Automate quote completion"
+	description_label.text = "Speed 2"
+	tooltip_text = "4x monkey typing speed"

@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3vvy3yoajmuo"]
+
+[ext_resource type="Script" path="res://interface/shop_buttons/intellect_button.gd" id="2_3rrwv"]
+[ext_resource type="Texture2D" uid="uid://c5ph2x5p8c0up" path="res://assets/art/sprites/Banana.png" id="3_3aas3"]
+[ext_resource type="Texture2D" uid="uid://cvqk0mp716rw" path="res://assets/art/sprites/Smart_1.png" id="3_l6mi0"]
+
+[node name="IntellectButton" type="TextureButton"]
+offset_left = -15.0
+offset_top = -26.0
+offset_right = 17.0
+offset_bottom = 6.0
+texture_normal = ExtResource("3_l6mi0")
+script = ExtResource("2_3rrwv")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 17.0
+offset_right = 54.0
+offset_bottom = 65.0
+texture = ExtResource("3_3aas3")
+
+[node name="Price" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -47.0
+offset_top = 32.0
+offset_right = -17.0
+offset_bottom = 48.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 8
+text = "500"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -36.0
+offset_top = -35.0
+offset_right = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 8
+text = "Intellect 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3

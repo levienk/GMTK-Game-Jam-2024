@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=3 uid="uid://hotnvkxdrx8c"]
+
+[ext_resource type="Texture2D" uid="uid://l5t2xc4olyxg" path="res://assets/art/sprites/Speed_1.png" id="1_b7mcn"]
+[ext_resource type="Script" path="res://interface/shop_buttons/speed_button.gd" id="2_k6v3i"]
+[ext_resource type="Texture2D" uid="uid://c5ph2x5p8c0up" path="res://assets/art/sprites/Banana.png" id="3_q1wah"]
+
+[node name="SpeedButton" type="TextureButton"]
+offset_left = -15.0
+offset_top = -26.0
+offset_right = 17.0
+offset_bottom = 6.0
+texture_normal = ExtResource("1_b7mcn")
+script = ExtResource("2_k6v3i")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 17.0
+offset_right = 54.0
+offset_bottom = 65.0
+texture = ExtResource("3_q1wah")
+
+[node name="Price" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -47.0
+offset_top = 32.0
+offset_right = -17.0
+offset_bottom = 48.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 8
+text = "500"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -36.0
+offset_top = -35.0
+offset_right = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 8
+text = "Speed 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3

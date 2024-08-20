@@ -20,6 +20,7 @@ WordDictionary="*res://text_generation/word_dictionary.tscn"
 SignalBus="*res://signal_bus.tscn"
 Bananas="*res://interface/bananas.gd"
 Points="*res://interface/points.gd"
+Monkey="*res://monkey/monkey.gd"
 
 [display]
 

@@ -2,9 +2,11 @@ extends Node
 
 var monkeyscene = load("res://monkey/monkey.tscn")
 var pos = Vector2(200,280) # Bottom Left
+var monkey_counter = 1
 
 func _ready() -> void:
 	SignalBus.spawn_monkey.connect(_on_spawn_monkey)
+	_on_spawn_monkey()
 	
 # From SignalBus MonkeyButton
 func _on_spawn_monkey():
@@ -17,3 +19,4 @@ func _on_spawn_monkey():
 	else:
 		pos.x += 50
 	add_child(monkey)
+	monkey_counter += 1
