@@ -16,12 +16,12 @@ func _ready() -> void:
 func _pressed() -> void:
 	if Bananas.subtract_score(price) and level == 1:
 		ka_ching.play()
-		SignalBus.auto_1_enabled.emit()
+		SignalBus.auto_2_enabled.emit()
 		level += 1
 		level_up()
 	elif Bananas.subtract_score(price) and level == 2:
 		ka_ching.play()
-		SignalBus.auto_2_enabled.emit()
+		SignalBus.auto_1_enabled.emit()
 		modulate.a = .5
 		disabled = true
 
@@ -32,7 +32,7 @@ func level_up():
 	price_label.text = str(price)
 	description_label.text = "Auto 2"
 	$ShortDescription.text = "Spellseeker-and-destroyer"
-	$LongDescription.text = "Unfortunately the machine uprising has rendered the need for flesh-creature literature a moot point. Luckily for us, though, they're still willing to make sure all our adjectives are properly ordered.\n\nAutomate quote completion"
+	$LongDescription.text = "Unfortunately the machine uprising has rendered the need for flesh-creature literature a moot point. Luckily for us, though, they're still willing to make sure all our adjectives are properly ordered.\n\nAutomate typing words"
 	$TextureRect2.texture = load("res://assets/art/sprites/tooltip6.png")
 	
 func _on_mouse_entered() -> void:
