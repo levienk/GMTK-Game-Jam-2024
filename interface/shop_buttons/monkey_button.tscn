@@ -18,9 +18,9 @@ script = ExtResource("2_x23fy")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 24.0
+offset_left = 14.0
 offset_top = 47.0
-offset_right = 72.0
+offset_right = 62.0
 offset_bottom = 95.0
 texture = ExtResource("3_057l3")
 
@@ -29,9 +29,9 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -63.0
+offset_left = -69.0
 offset_top = 61.0
-offset_right = -33.0
+offset_right = -39.0
 offset_bottom = 77.0
 grow_horizontal = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -47,9 +47,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -35.0
+offset_left = -36.0
 offset_top = -51.0
-offset_right = 35.0
+offset_right = 34.0
 offset_bottom = -16.0
 grow_horizontal = 2
 grow_vertical = 2

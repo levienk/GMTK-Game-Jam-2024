@@ -8,9 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://xwftamwrd70b" path="res://assets/art/sprites/tooltip1.png" id="6_xrpty"]
 
 [node name="SpeedButton" type="TextureButton"]
-offset_left = -16.0
+offset_left = -18.0
 offset_top = -218.0
-offset_right = 16.0
+offset_right = 14.0
 offset_bottom = -186.0
 texture_normal = ExtResource("1_b7mcn")
 texture_hover = ExtResource("2_wcwop")
@@ -18,10 +18,10 @@ script = ExtResource("2_k6v3i")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 7.0
-offset_top = 186.0
-offset_right = 55.0
-offset_bottom = 234.0
+offset_left = 1.0
+offset_top = 195.0
+offset_right = 49.0
+offset_bottom = 243.0
 texture = ExtResource("3_q1wah")
 
 [node name="Price" type="Label" parent="."]
@@ -29,10 +29,10 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -50.0
-offset_top = 200.0
-offset_right = -20.0
-offset_bottom = 216.0
+offset_left = -52.0
+offset_top = 209.0
+offset_right = -22.0
+offset_bottom = 225.0
 grow_horizontal = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 8
@@ -47,9 +47,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -49.0
+offset_left = -45.0
 offset_top = -72.0
-offset_right = 49.0
+offset_right = 53.0
 offset_bottom = -37.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -69,9 +69,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -59.0
+offset_left = -57.0
 offset_top = -45.0
-offset_right = 59.0
+offset_right = 61.0
 offset_bottom = -15.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -84,10 +84,10 @@ autowrap_mode = 3
 
 [node name="LongDescription" type="Label" parent="."]
 layout_mode = 0
-offset_left = -50.0
+offset_left = -37.0
 offset_top = 36.0
-offset_right = 82.0
-offset_bottom = 52.0
+offset_right = 95.0
+offset_bottom = 165.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 8
 text = "Shoving a battery into the delicate workings of an antique typewriter has masterfully increased the rate at which simian specialists can mash out text. 
