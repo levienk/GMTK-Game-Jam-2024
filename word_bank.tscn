@@ -21,4 +21,3 @@ script = ExtResource("2_rs8d5")
 [node name="CreateSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_m4jiu")
 volume_db = -22.105
-bus = &"SFX"
