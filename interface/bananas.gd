@@ -13,21 +13,3 @@ static func subtract_score(score: int) -> bool:
 	else:
 		bananas -= score
 		return true
-
-func _ready() -> void:
-	
-	SignalBus.shop_clicked.connect(_clicked)
-
-func _clicked(): 
-	
-	pass
-	
-	
-func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	
-	
-	if event is InputEventMouseButton:
-		
-		if event.pressed:
-			
-			SignalBus.shop_clicked.emit()

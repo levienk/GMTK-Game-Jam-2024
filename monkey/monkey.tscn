@@ -922,6 +922,7 @@ bus = &"Monkeys"
 volume_db = -6.0
 bus = &"Monkeys"
 
+[connection signal="animation_finished" from="AnimatedMonkey" to="." method="_on_animated_monkey_animation_finished"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="resized" from="Label" to="TextBoundary" method="_on_label_resized"]
 [connection signal="finished" from="Type" to="." method="_on_type_finished"]

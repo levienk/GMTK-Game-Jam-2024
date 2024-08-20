@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cv7hyn3xhhpxa"]
+[gd_scene load_steps=15 format=3 uid="uid://cv7hyn3xhhpxa"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_56afu"]
 [ext_resource type="Texture2D" uid="uid://brhyun46vmtue" path="res://assets/art/background/Background.png" id="2_l3re6"]
@@ -12,12 +12,15 @@
 [ext_resource type="PackedScene" uid="uid://yswp1x6mlj2a" path="res://word_bank.tscn" id="7_x0vgp"]
 [ext_resource type="PackedScene" uid="uid://b3vvy3yoajmuo" path="res://interface/shop_buttons/intellect_button.tscn" id="7_xh8kw"]
 [ext_resource type="PackedScene" uid="uid://hotnvkxdrx8c" path="res://interface/shop_buttons/speed_button.tscn" id="7_xqb2u"]
-[ext_resource type="PackedScene" uid="uid://d0rijm254wi7t" path="res://interface/shop_box.tscn" id="13_vnt6t"]
+[ext_resource type="PackedScene" uid="uid://ckheyu4s10g4p" path="res://interface/shop_buttons/shop_button.tscn" id="8_wq7y3"]
+[ext_resource type="PackedScene" path="res://interface/shop_box.tscn" id="13_vnt6t"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_56afu")
 
 [node name="Background" type="TextureRect" parent="."]
+offset_right = 640.0
+offset_bottom = 360.0
 texture = ExtResource("2_l3re6")
 
 [node name="MonkeySpawner" type="Node" parent="."]
@@ -56,6 +59,15 @@ offset_top = 160.0
 offset_right = 626.0
 offset_bottom = 192.0
 
+[node name="ShopButton" parent="Interface/Shop" instance=ExtResource("8_wq7y3")]
+offset_left = 582.0
+offset_top = 83.0
+offset_right = 635.0
+offset_bottom = 139.0
+
+[node name="ShopBox" parent="Interface/Shop" instance=ExtResource("13_vnt6t")]
+position = Vector2(188, 136)
+
 [node name="Bananas" parent="Interface" instance=ExtResource("4_7lhl4")]
 position = Vector2(589, 44)
 
@@ -72,8 +84,5 @@ offset_bottom = 360.0
 
 [node name="QuoteBox" parent="Interface" instance=ExtResource("7_12ej7")]
 position = Vector2(401, 321)
-
-[node name="ShopBox" parent="Interface" instance=ExtResource("13_vnt6t")]
-position = Vector2(188, 136)
 
 [connection signal="new_word_typed" from="Interface/LineEdit" to="Interface/WordBank" method="_on_line_edit_new_word_typed"]

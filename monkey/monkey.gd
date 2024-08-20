@@ -22,6 +22,15 @@ const possible_chars = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n",
 var random_word: String
 var previous_valid_word: String
 
+# Animation
+@onready var animated_monkey: AnimatedSprite2D = $AnimatedMonkey
+@onready var animated_typewriter: AnimatedSprite2D = $AnimatedMonkey/AnimatedTypewriter
+var animations = ["monkey1_typing_1_1","monkey1_typing_1_2","monkey1_typing_1_3",
+					"monkey1_typing_2_1","monkey1_typing_2_2","monkey1_typing_2_3",
+					"monkey1_frustrated_1_1","monkey1_frustrated_1_2","monkey1_frustrated_1_3",
+					"monkey1_frustrated_2_1","monkey1_frustrated_2_2"]
+var random_switch_animations
+
 @onready var timer: Timer = $Timer
 @onready var text_boundary: NinePatchRect = $TextBoundary
 
@@ -38,8 +47,6 @@ func _ready() -> void:
 	
 	load_sounds()
 	type.play()
-
-
 
 func _on_timer_timeout() -> void:
 	SignalBus.remove_last_word_found.emit(previous_valid_word)
@@ -125,3 +132,7 @@ func load_sounds():
 func _on_type_finished() -> void:
 	
 	type.play()
+
+
+func _on_animated_monkey_animation_finished() -> void:
+	pass # Replace with function body.
