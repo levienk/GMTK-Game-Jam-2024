@@ -421,7 +421,7 @@ animations = [{
 "duration": 0.5,
 "texture": SubResource("AtlasTexture_4mw37")
 }],
-"loop": false,
+"loop": true,
 "name": &"monkey1_typing_1_2",
 "speed": 5.0
 }, {
@@ -882,7 +882,8 @@ script = ExtResource("4_lr3px")
 [node name="AnimatedMonkey" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -13)
 sprite_frames = SubResource("SpriteFrames_iaowo")
-animation = &"monkey1_frustrated_2_2"
+animation = &"monkey1_typing_1_2"
+autoplay = "monkey1_typing_1_2"
 
 [node name="AnimatedTypewriter" type="AnimatedSprite2D" parent="AnimatedMonkey"]
 position = Vector2(-4, 3)
