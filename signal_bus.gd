@@ -21,3 +21,5 @@ signal intellect_2_enabled()
 signal speed_1_enabled()
 
 signal speed_2_enabled()
+
+signal shop_clicked()
