@@ -20,7 +20,7 @@ func _on_word_found(word: String):
 	if not words_found.has(word) and not words_not_typed.has(word):
 		if auto_mode:
 			new_word_typed.emit(word)
-			Bananas.add_score(100)
+			add_bananas(word)
 		words_not_typed.append(word)
 	
 # When the user has entered a word
@@ -31,7 +31,7 @@ func _input(event: InputEvent) -> void:
 		var index = words_not_typed.find(text)
 		# If the user typed a typable word
 		if index != -1:
-			Bananas.add_score(100)
+			add_bananas(text)
 			words_not_typed.remove_at(index)
 			words_found.append(text)
 			new_word_typed.emit(text)
@@ -54,3 +54,7 @@ func _on_timer_timeout() -> void:
 		SignalBus.send_word_to_quote.emit(word)
 	for word in words_found:
 		SignalBus.send_word_to_quote.emit(word)
+
+func add_bananas(word: String):
+	var points = 10 * word.length()
+	Bananas.add_score(points)
