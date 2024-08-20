@@ -159,7 +159,7 @@ func _on_animated_monkey_animation_finished() -> void:
 		animated_monkey.play()
 	else:
 		animated_monkey.play()
-	if animated_monkey.animation == animations[2]:
+	if animated_monkey.animation == animations[10]:
 		animated_monkey.animation = rand3_anim.pick_random()
 		animated_monkey.play()
 		
