@@ -87,11 +87,11 @@ func _on_speed_2_enabled():
 
 func _on_intellect_1_enabled():
 	valid_word_chance = valid_word_chance_const * 2
-	valid_word_in_quote_chance = valid_word_in_quote_chance * 2
+	valid_word_in_quote_chance = valid_word_in_quote_chance_const * 2
 
 func _on_intellect_2_enabled():
 	valid_word_chance = valid_word_chance_const * 4
-	valid_word_in_quote_chance = valid_word_in_quote_chance * 4
+	valid_word_in_quote_chance = valid_word_in_quote_chance_const * 4
 
 func load_sounds():
 	
