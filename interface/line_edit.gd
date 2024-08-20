@@ -52,6 +52,7 @@ func _on_auto_1_enabled():
 	editable = false
 	auto_mode = true
 	
+	
 func _on_auto_2_enabled():
 	$Timer.start()
 	
