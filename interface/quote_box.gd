@@ -2,6 +2,7 @@ extends Area2D
 
 const unwanted_chars = [".",",",":","?",";","!","&","-","/","\"","—"]
 
+var used_quotes = []
 var word_list: Array
 var quote: String
 @onready var text_selector: Node2D = $TextSelector
@@ -21,15 +22,33 @@ func get_new_quote():
 		beep.play() 
 	
 	# Update the level and recieve the quote
-	if Points.points == 16:
+	if Points.points == 30:
 		quote = "You win!"
+	# 7 1, 6 2, 555, 2
 	# Update every two points, and not when the game first launches
-	elif Points.points % 2 == 0 && Points.points != 0:
+	elif Points.points == 7:
+		text_selector.update_level()
+		quote = text_selector.get_random_quote()
+	elif Points.points == 13:
+		text_selector.update_level()
+		quote = text_selector.get_random_quote()
+	elif Points.points == 18:
+		text_selector.update_level()
+		quote = text_selector.get_random_quote()
+	elif Points.points == 23:
+		text_selector.update_level()
+		quote = text_selector.get_random_quote()
+	elif Points.points == 28:
 		text_selector.update_level()
 		quote = text_selector.get_random_quote()
 	else:
 		quote = text_selector.get_random_quote()
 	label.bbcode_text = quote
+	
+	# Don't reuse the same quote
+	while used_quotes.has(quote):
+		quote = text_selector.get_random_quote()
+	used_quotes.append(quote)
 	
 	# Create a list of words
 	word_list.clear()

@@ -20,6 +20,7 @@ static var quote_word_list: Array
 const possible_chars = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n",
 						"o","p","q","r","s","t","u","v","w","x","y","z"]
 var random_word: String
+var previous_valid_word: String
 
 @onready var timer: Timer = $Timer
 @onready var text_boundary: NinePatchRect = $TextBoundary
@@ -41,6 +42,7 @@ func _ready() -> void:
 
 
 func _on_timer_timeout() -> void:
+	SignalBus.remove_last_word_found.emit(previous_valid_word)
 	timer.stop()
 	random_word = ""
 	var rand = randf()
@@ -61,6 +63,7 @@ func _on_timer_timeout() -> void:
 	
 	if (WordDictionary.contains(random_word)):
 		SignalBus.word_found.emit(random_word)
+		previous_valid_word = random_word
 		timer.wait_time = valid_time
 		text_boundary.texture = valid_texture
 		ding.play()
@@ -77,7 +80,6 @@ func _on_new_quote_words(words):
 
 func _on_speed_1_enabled():
 	random_time = random_time_const / 2.0
-	valid_time = valid_time_const / 2.0
 	
 func _on_speed_2_enabled():
 	random_time = random_time_const / 2.0
