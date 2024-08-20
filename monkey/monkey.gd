@@ -139,5 +139,51 @@ func _on_type_finished() -> void:
 
 
 func _on_animated_monkey_animation_finished() -> void:
-	animated_monkey.animation = animations[1]
-	animated_monkey.play()
+	var rand_limit = 0.1
+	# Loop 1
+	if animated_monkey.animation == animations[0]:
+		animated_monkey.animation = animations[1]
+		animated_monkey.play()
+	if animated_monkey.animation == animations[1] && randf() < rand_limit:
+		animated_monkey.animation = animations[2]
+		animated_monkey.play()
+	else:
+		animated_monkey.play()
+	if animated_monkey.animation == animations[2]:
+		animated_monkey.animation = rand1_anim.pick_random()
+		animated_monkey.play()
+	
+	# Loop 2
+	if animated_monkey.animation == animations[9] && randf() < rand_limit:
+		animated_monkey.animation = animations[10]
+		animated_monkey.play()
+	else:
+		animated_monkey.play()
+	if animated_monkey.animation == animations[2]:
+		animated_monkey.animation = rand3_anim.pick_random()
+		animated_monkey.play()
+		
+	# Loop 3
+	if animated_monkey.animation == animations[6]:
+		animated_monkey.animation = animations[7]
+		animated_monkey.play()
+	if animated_monkey.animation == animations[7] && randf() < rand_limit:
+		animated_monkey.animation = rand2_anim.pick_random()
+		animated_monkey.play()
+	else:
+		animated_monkey.play()
+	if animated_monkey.animation == animations[8]:
+		animated_monkey.animation = rand3_anim.pick_random()
+		animated_monkey.play()
+
+	# Loop 4
+	if animated_monkey.animation == animations[3]:
+		animated_monkey.animation = animations[4]
+	if animated_monkey.animation == animations[4] && randf() < rand_limit:
+		animated_monkey.animation = animations[5]
+		animated_monkey.play()
+	else:
+		animated_monkey.play()
+	if animated_monkey.animation == animations[5]:
+		animated_monkey.animation = animations[8]
+		animated_monkey.play()

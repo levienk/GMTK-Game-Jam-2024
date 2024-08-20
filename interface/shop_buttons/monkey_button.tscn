@@ -1,25 +1,26 @@
 [gd_scene load_steps=6 format=3 uid="uid://crtew8dttcvtd"]
 
-[ext_resource type="Texture2D" uid="uid://c8dev0e06jdyv" path="res://assets/art/sprites/Monkey1_idle_1-export.png" id="1_fb3e1"]
+[ext_resource type="Texture2D" uid="uid://cwnepy7df4hdi" path="res://assets/art/sprites/Monkey.png" id="1_yw2eh"]
 [ext_resource type="Texture2D" uid="uid://ck3b0ccdlfdh5" path="res://assets/art/sprites/Monkeyhover.png" id="2_tibg2"]
 [ext_resource type="Script" path="res://interface/shop_buttons/monkey_button.gd" id="2_x23fy"]
 [ext_resource type="Texture2D" uid="uid://c5ph2x5p8c0up" path="res://assets/art/sprites/Banana.png" id="3_057l3"]
 [ext_resource type="AudioStream" uid="uid://cvbidksdgxmdj" path="res://assets/sfx/buy_sound.wav" id="4_cmbex"]
 
 [node name="MonkeyButton" type="TextureButton"]
-offset_left = -9.0
-offset_top = -22.0
-offset_right = 12.0
-texture_normal = ExtResource("1_fb3e1")
+offset_left = -15.0
+offset_top = -25.0
+offset_right = 17.0
+offset_bottom = 7.0
+texture_normal = ExtResource("1_yw2eh")
 texture_hover = ExtResource("2_tibg2")
 script = ExtResource("2_x23fy")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 2.0
-offset_top = 12.0
-offset_right = 50.0
-offset_bottom = 60.0
+offset_left = 5.0
+offset_top = 15.0
+offset_right = 53.0
+offset_bottom = 63.0
 texture = ExtResource("3_057l3")
 
 [node name="Price" type="Label" parent="."]
@@ -27,10 +28,10 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -39.0
-offset_top = 27.0
-offset_right = -9.0
-offset_bottom = 43.0
+offset_left = -48.0
+offset_top = 29.0
+offset_right = -18.0
+offset_bottom = 45.0
 grow_horizontal = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 8
@@ -45,9 +46,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -36.5
+offset_left = -36.0
 offset_top = -39.0
-offset_right = 33.5
+offset_right = 34.0
 offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 2
