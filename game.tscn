@@ -48,8 +48,6 @@ offset_left = 591.0
 offset_top = 162.0
 offset_right = 623.0
 offset_bottom = 194.0
-price = 5000
-level_2_price = 7000
 
 [node name="Bananas" parent="Interface" instance=ExtResource("4_7lhl4")]
 position = Vector2(589, 44)
