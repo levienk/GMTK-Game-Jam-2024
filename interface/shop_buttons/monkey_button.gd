@@ -8,6 +8,5 @@ func _ready() -> void:
 	price_label.text = str(price)
 
 func _pressed() -> void:
-	print("hello!")
 	if Bananas.subtract_score(price):
 		SignalBus.spawn_monkey.emit()

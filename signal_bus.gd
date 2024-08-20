@@ -9,3 +9,7 @@ signal new_quote_words(words: Array)
 signal spawn_monkey()
 
 signal send_word_to_quote(word: String)
+
+signal auto_1_enabled()
+
+signal auto_2_enabled()

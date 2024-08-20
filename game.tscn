@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cv7hyn3xhhpxa"]
+[gd_scene load_steps=12 format=3 uid="uid://cv7hyn3xhhpxa"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_56afu"]
 [ext_resource type="Texture2D" uid="uid://brhyun46vmtue" path="res://assets/art/background/Background.png" id="2_l3re6"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://crtew8dttcvtd" path="res://interface/shop_buttons/monkey_button.tscn" id="4_nytqr"]
 [ext_resource type="PackedScene" uid="uid://c1ociivssjn43" path="res://interface/line_edit.tscn" id="5_1mtwb"]
 [ext_resource type="PackedScene" uid="uid://dkgg620vc5iym" path="res://interface/points.tscn" id="5_n2ph4"]
+[ext_resource type="PackedScene" uid="uid://cfysk3jibfisb" path="res://interface/shop_buttons/auto_move_button.tscn" id="6_dovn3"]
 [ext_resource type="PackedScene" uid="uid://cuhl7weq4iso3" path="res://interface/quote_box.tscn" id="7_12ej7"]
 [ext_resource type="PackedScene" uid="uid://yswp1x6mlj2a" path="res://word_bank.tscn" id="7_x0vgp"]
 
@@ -41,6 +42,14 @@ offset_left = 594.0
 offset_top = 102.0
 offset_right = 615.0
 offset_bottom = 124.0
+
+[node name="AutoMoveButton" parent="Interface/Shop" instance=ExtResource("6_dovn3")]
+offset_left = 591.0
+offset_top = 162.0
+offset_right = 623.0
+offset_bottom = 194.0
+price = 5000
+level_2_price = 7000
 
 [node name="Bananas" parent="Interface" instance=ExtResource("4_7lhl4")]
 position = Vector2(589, 44)
