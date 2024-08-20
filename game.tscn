@@ -32,7 +32,7 @@ offset_left = 574.0
 offset_top = 160.0
 offset_right = 638.0
 offset_bottom = 224.0
-price = 250
+price = 300
 
 [node name="ShopButton" parent="Interface/Shop" instance=ExtResource("8_wq7y3")]
 offset_left = 582.0
@@ -41,7 +41,7 @@ offset_right = 635.0
 offset_bottom = 139.0
 
 [node name="ShopBox" parent="Interface/Shop" instance=ExtResource("13_vnt6t")]
-position = Vector2(70, 110)
+position = Vector2(71, 110)
 
 [node name="Bananas" parent="Interface" instance=ExtResource("4_7lhl4")]
 position = Vector2(589, 44)

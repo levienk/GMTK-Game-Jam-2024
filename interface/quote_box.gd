@@ -76,6 +76,7 @@ func _on_send_word_to_quote(word: String):
 	if word_list.has(word):
 		word_list.erase(word)
 		# The quote has been completed!
+		Bananas.add_score(150)
 		if word_list.is_empty():
 			Points.add_point()
 			get_new_quote()

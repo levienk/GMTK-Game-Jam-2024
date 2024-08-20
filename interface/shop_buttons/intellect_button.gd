@@ -32,7 +32,7 @@ func level_up():
 	price_label.text = str(price)
 	description_label.text = "Intellect 2"
 	$ShortDescription.text = "Pocket Scrabble dictionary"
-	$LongDescription.text = "Of course \"wppwrmwste\" is a word! It says so right here! Through the power of the Scrabble dictionary, even the most profound pile of phonics can become a valid play.\n\n4x valid word chance"
+	$LongDescription.text = "Of course \"wppwrmwste\" is a word! It says so right here! Through the power of the Scrabble dictionary, even the most profound pile of phonics can become a valid play.\n\n3x valid word chance"
 	$TextureRect2.texture = load("res://assets/art/sprites/tooltip4.png")
 
 func _on_mouse_entered() -> void:

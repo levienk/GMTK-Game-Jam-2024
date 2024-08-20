@@ -2,8 +2,8 @@ extends Node2D
 
 const random_time_const = 1
 const valid_time_const = 6.0
-const valid_word_chance_const = 0.1
-const valid_word_in_quote_chance_const = 0.02
+const valid_word_chance_const = 0.07
+const valid_word_in_quote_chance_const = 0.015
 
 # Set textures for the TextBoundary
 static var invalid_texture = load("res://assets/art/textures/Invalid.png")
@@ -90,19 +90,19 @@ func _on_new_quote_words(words):
 	quote_word_list = words
 
 func _on_speed_1_enabled():
-	random_time = random_time_const / 2.0
+	random_time = random_time_const / 1.5
 	
 func _on_speed_2_enabled():
 	random_time = random_time_const / 2.0
 	valid_time = valid_time_const / 2.0
 
 func _on_intellect_1_enabled():
-	valid_word_chance = valid_word_chance_const * 2
-	valid_word_in_quote_chance = valid_word_in_quote_chance_const * 2
+	valid_word_chance = valid_word_chance_const * 1.5
+	valid_word_in_quote_chance = valid_word_in_quote_chance_const * 1.5
 
 func _on_intellect_2_enabled():
-	valid_word_chance = valid_word_chance_const * 4
-	valid_word_in_quote_chance = valid_word_in_quote_chance_const * 4
+	valid_word_chance = valid_word_chance_const * 2
+	valid_word_in_quote_chance = valid_word_in_quote_chance_const * 2
 
 func load_sounds():
 	

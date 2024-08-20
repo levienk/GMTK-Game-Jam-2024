@@ -92,7 +92,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 8
 text = "Shoving a battery into the delicate workings of an antique typewriter has masterfully increased the rate at which simian specialists can mash out text. 
 
-2x monkey typing speed"
+1.5x monkey typing speed"
 autowrap_mode = 3
 
 [node name="Timer" type="Timer" parent="."]

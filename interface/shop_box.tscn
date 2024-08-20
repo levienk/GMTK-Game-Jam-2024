@@ -36,10 +36,11 @@ offset_left = 227.0
 offset_top = -36.0
 offset_right = 259.0
 offset_bottom = -4.0
-price = 700
+price = 1500
 
 [node name="SpeedButton" parent="." instance=ExtResource("4_k3r1t")]
 offset_left = 77.0
 offset_top = -26.0
 offset_right = 109.0
 offset_bottom = 6.0
+price = 1000
