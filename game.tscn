@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://cv7hyn3xhhpxa"]
+[gd_scene load_steps=13 format=3 uid="uid://cv7hyn3xhhpxa"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_56afu"]
+[ext_resource type="PackedScene" uid="uid://bdxxn4b5jg3vh" path="res://text_generation/word_dictionary.tscn" id="2_hv4iw"]
 [ext_resource type="Texture2D" uid="uid://brhyun46vmtue" path="res://assets/art/background/Background.png" id="2_l3re6"]
 [ext_resource type="Script" path="res://monkey/monkey_spawner.gd" id="3_etdxv"]
 [ext_resource type="PackedScene" uid="uid://q8qbn8fg2j3l" path="res://interface/bananas.tscn" id="4_7lhl4"]
@@ -14,6 +15,8 @@
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_56afu")
+
+[node name="WordDictionary" parent="." instance=ExtResource("2_hv4iw")]
 
 [node name="Background" type="TextureRect" parent="."]
 offset_right = 640.0
