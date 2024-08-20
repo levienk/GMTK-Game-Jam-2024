@@ -26,19 +26,19 @@ offset_bottom = 112.0
 texture = ExtResource("2_qntf6")
 
 [node name="AutoMoveButton" parent="." instance=ExtResource("2_7u6el")]
-offset_left = 400.0
-offset_top = -31.0
-offset_right = 432.0
-offset_bottom = 1.0
+offset_left = 383.0
+offset_top = -30.0
+offset_right = 415.0
+offset_bottom = 2.0
 
 [node name="IntellectButton" parent="." instance=ExtResource("3_kj5jh")]
-offset_left = 237.0
+offset_left = 227.0
 offset_top = -36.0
-offset_right = 269.0
+offset_right = 259.0
 offset_bottom = -4.0
 
 [node name="SpeedButton" parent="." instance=ExtResource("4_k3r1t")]
-offset_left = 87.0
+offset_left = 77.0
 offset_top = -26.0
-offset_right = 119.0
+offset_right = 109.0
 offset_bottom = 6.0
