@@ -32,7 +32,7 @@ offset_left = 574.0
 offset_top = 160.0
 offset_right = 638.0
 offset_bottom = 224.0
-price = 300
+price = 50
 
 [node name="ShopButton" parent="Interface/Shop" instance=ExtResource("8_wq7y3")]
 offset_left = 582.0
