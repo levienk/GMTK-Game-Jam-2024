@@ -6,6 +6,7 @@ var word_list: Array
 var quote: String
 @onready var text_selector: Node2D = $TextSelector
 @onready var label: RichTextLabel = $RichTextLabel
+@onready var beep = $PointsSFX
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,6 +14,12 @@ func _ready() -> void:
 	SignalBus.send_word_to_quote.connect(_on_send_word_to_quote)
 	
 func get_new_quote():
+	
+	# Make the since beep sound.
+	# (but not initially...)
+	if Points.points > 0:
+		beep.play() 
+	
 	# Update the level and recieve the quote
 	if Points.points == 16:
 		quote = "You win!"

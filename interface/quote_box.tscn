@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cuhl7weq4iso3"]
+[gd_scene load_steps=5 format=3 uid="uid://cuhl7weq4iso3"]
 
 [ext_resource type="Script" path="res://interface/quote_box.gd" id="1_g1j5q"]
 [ext_resource type="PackedScene" uid="uid://xb5j1xux3wyx" path="res://text_generation/text_selector.tscn" id="2_r0cwj"]
+[ext_resource type="AudioStream" uid="uid://bxhwcok754aci" path="res://assets/sfx/get_points.wav" id="3_1jppk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2hqu2"]
 size = Vector2(478.5, 76)
@@ -36,3 +37,7 @@ Or that the Everlasting had not fix’d
 His canon ’gainst self-slaughter! O God! God!
 How weary, stale, flat and unprofitable,
 Seem to me all the uses of this world!"
+
+[node name="PointsSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_1jppk")
+bus = &"SFX"
