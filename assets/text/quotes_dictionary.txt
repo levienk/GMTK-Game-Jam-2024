@@ -153,7 +153,7 @@ divided
 do
 does
 dogs
-don't
+don’t
 done
 door
 down
@@ -283,9 +283,9 @@ however
 human
 hurrying
 i
-i'll
-i'm
-i've
+i’ll
+i’m
+i’ve
 if
 illusion
 immortality
@@ -308,7 +308,7 @@ iron
 is
 ishmael
 it
-it's
+it’s
 its
 itself
 it’s

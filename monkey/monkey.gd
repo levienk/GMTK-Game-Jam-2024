@@ -1,14 +1,19 @@
 extends Node2D
 
+const random_time_const = 1
+const valid_time_const = 6.0
+const valid_word_chance_const = 0.1
+const valid_word_in_quote_chance_const = 0.02
+
 # Set textures for the TextBoundary
 static var invalid_texture = load("res://assets/art/textures/Invalid.png")
 static var valid_texture = load("res://assets/art/textures/Valid.png")
 
-static var random_time = 1
-static var valid_time = 6.0
-static var valid_word_chance = 0.1
+static var random_time = random_time_const
+static var valid_time = valid_time_const
+static var valid_word_chance = valid_word_chance_const
 # Must be less than valid_word_chance
-static var valid_word_in_quote_chance = 0.02
+static var valid_word_in_quote_chance = valid_word_in_quote_chance_const
 static var max_word_length = 10
 
 static var quote_word_list: Array
@@ -25,6 +30,10 @@ var random_word: String
 
 func _ready() -> void:
 	SignalBus.new_quote_words.connect(_on_new_quote_words)
+	SignalBus.speed_1_enabled.connect(_on_speed_1_enabled)
+	SignalBus.speed_2_enabled.connect(_on_speed_2_enabled)
+	SignalBus.intellect_1_enabled.connect(_on_intellect_1_enabled)
+	SignalBus.intellect_2_enabled.connect(_on_intellect_2_enabled)
 	
 	load_sounds()
 	type.play()
@@ -65,6 +74,22 @@ func _on_timer_timeout() -> void:
 # SignalBus new_quote_words (from QuoteBox)
 func _on_new_quote_words(words):
 	quote_word_list = words
+
+func _on_speed_1_enabled():
+	random_time = random_time_const / 2.0
+	valid_time = valid_time_const / 2.0
+	
+func _on_speed_2_enabled():
+	random_time = random_time_const / 2.0
+	valid_time = valid_time_const / 2.0
+
+func _on_intellect_1_enabled():
+	valid_word_chance = valid_word_chance_const * 2
+	valid_word_in_quote_chance = valid_word_in_quote_chance * 2
+
+func _on_intellect_2_enabled():
+	valid_word_chance = valid_word_chance_const * 4
+	valid_word_in_quote_chance = valid_word_in_quote_chance * 4
 
 func load_sounds():
 	

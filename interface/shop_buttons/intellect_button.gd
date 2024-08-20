@@ -14,13 +14,11 @@ func _ready() -> void:
 
 func _pressed() -> void:
 	if Bananas.subtract_score(price) and level == 1:
-		Monkey.valid_word_chance *= 2
-		Monkey.valid_word_in_quote_chance *= 2
+		SignalBus.intellect_1_enabled.emit()
 		level += 1
 		level_up()
 	elif Bananas.subtract_score(price) and level == 2:
-		Monkey.valid_word_chance *= 2
-		Monkey.valid_word_in_quote_chance *= 2
+		SignalBus.intellect_2_enabled.emit()
 		modulate.a = .5
 		disabled = true
 
