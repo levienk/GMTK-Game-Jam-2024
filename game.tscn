@@ -28,10 +28,10 @@ script = ExtResource("3_etdxv")
 [node name="Shop" type="Node" parent="Interface"]
 
 [node name="MonkeyButton" parent="Interface/Shop" instance=ExtResource("4_nytqr")]
-offset_left = 588.0
-offset_top = 162.0
-offset_right = 620.0
-offset_bottom = 194.0
+offset_left = 571.0
+offset_top = 149.0
+offset_right = 635.0
+offset_bottom = 213.0
 
 [node name="ShopButton" parent="Interface/Shop" instance=ExtResource("8_wq7y3")]
 offset_left = 582.0

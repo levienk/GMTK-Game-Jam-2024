@@ -7,20 +7,21 @@
 [ext_resource type="AudioStream" uid="uid://cvbidksdgxmdj" path="res://assets/sfx/buy_sound.wav" id="4_cmbex"]
 
 [node name="MonkeyButton" type="TextureButton"]
-offset_left = -15.0
-offset_top = -25.0
-offset_right = 17.0
-offset_bottom = 7.0
+offset_left = -32.0
+offset_top = -56.0
+offset_right = 32.0
+offset_bottom = 8.0
 texture_normal = ExtResource("1_yw2eh")
 texture_hover = ExtResource("2_tibg2")
+stretch_mode = 0
 script = ExtResource("2_x23fy")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 15.0
-offset_right = 53.0
-offset_bottom = 63.0
+offset_left = 24.0
+offset_top = 47.0
+offset_right = 72.0
+offset_bottom = 95.0
 texture = ExtResource("3_057l3")
 
 [node name="Price" type="Label" parent="."]
@@ -28,10 +29,10 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -48.0
-offset_top = 29.0
-offset_right = -18.0
-offset_bottom = 45.0
+offset_left = -63.0
+offset_top = 61.0
+offset_right = -33.0
+offset_bottom = 77.0
 grow_horizontal = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 8
@@ -46,10 +47,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -36.0
-offset_top = -39.0
-offset_right = 34.0
-offset_bottom = -4.0
+offset_left = -35.0
+offset_top = -51.0
+offset_right = 35.0
+offset_bottom = -16.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
