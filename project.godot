@@ -10,9 +10,11 @@ config_version=5
 
 [application]
 
-config/name="GMTK Game Jam 2024"
+config/name="Monkeybrained"
+config/description="You're a stuggling writer, but you need that book written yesterday. So, you hired some monkyes and got some typwriters."
 run/main_scene="res://game.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
+config/icon="res://assets/art/background/Titleicon.png"
 
 [autoload]
 
