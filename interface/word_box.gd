@@ -15,3 +15,4 @@ func create(word: String) -> void:
 
 func _pressed() -> void:
 	SignalBus.send_word_to_quote.emit($TextBoundary/Label.text)
+ 
