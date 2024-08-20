@@ -2,9 +2,7 @@ extends Node2D
 # Dimensions: Lucas art 112*112 480 * 360
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	Bananas.bananas = 50000
-	
-	
+	pass
 
 # Ordering (z index)
 # Monkey = 5
