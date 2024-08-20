@@ -253,7 +253,7 @@ animations = [{
 "duration": 4.0,
 "texture": SubResource("AtlasTexture_jn32h")
 }],
-"loop": true,
+"loop": false,
 "name": &"monkey1_frustrated_1_1",
 "speed": 5.0
 }, {
@@ -264,7 +264,7 @@ animations = [{
 "duration": 0.5,
 "texture": SubResource("AtlasTexture_mtamy")
 }],
-"loop": true,
+"loop": false,
 "name": &"monkey1_frustrated_1_2",
 "speed": 5.0
 }, {
@@ -278,7 +278,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_u2o36")
 }],
-"loop": true,
+"loop": false,
 "name": &"monkey1_frustrated_1_3",
 "speed": 5.0
 }, {
@@ -295,7 +295,7 @@ animations = [{
 "duration": 0.4,
 "texture": SubResource("AtlasTexture_j041u")
 }],
-"loop": true,
+"loop": false,
 "name": &"monkey1_frustrated_2_1",
 "speed": 5.0
 }, {
@@ -327,7 +327,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_fwb7t")
 }],
-"loop": true,
+"loop": false,
 "name": &"monkey1_frustrated_2_2",
 "speed": 5.0
 }, {
@@ -338,7 +338,7 @@ animations = [{
 "duration": 4.0,
 "texture": SubResource("AtlasTexture_wtes7")
 }],
-"loop": true,
+"loop": false,
 "name": &"monkey1_idle_1",
 "speed": 5.0
 }, {
@@ -370,7 +370,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_tffkg")
 }],
-"loop": true,
+"loop": false,
 "name": &"monkey1_idle_2",
 "speed": 5.0
 }, {
@@ -390,7 +390,7 @@ animations = [{
 "duration": 4.0,
 "texture": SubResource("AtlasTexture_u6xq8")
 }],
-"loop": true,
+"loop": false,
 "name": &"monkey1_powerup_1",
 "speed": 5.0
 }, {
@@ -404,7 +404,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_y1n2b")
 }],
-"loop": true,
+"loop": false,
 "name": &"monkey1_typing_1_1",
 "speed": 5.0
 }, {
@@ -421,7 +421,7 @@ animations = [{
 "duration": 0.5,
 "texture": SubResource("AtlasTexture_4mw37")
 }],
-"loop": true,
+"loop": false,
 "name": &"monkey1_typing_1_2",
 "speed": 5.0
 }, {
@@ -435,7 +435,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ln75m")
 }],
-"loop": true,
+"loop": false,
 "name": &"monkey1_typing_1_3",
 "speed": 5.0
 }, {
@@ -449,7 +449,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_6t56j")
 }],
-"loop": true,
+"loop": false,
 "name": &"monkey1_typing_2_1",
 "speed": 5.0
 }, {
@@ -466,7 +466,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_1jb66")
 }],
-"loop": true,
+"loop": false,
 "name": &"monkey1_typing_2_2",
 "speed": 5.0
 }, {
@@ -480,7 +480,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_geic2")
 }],
-"loop": true,
+"loop": false,
 "name": &"monkey1_typing_2_3",
 "speed": 5.0
 }]
@@ -882,8 +882,7 @@ script = ExtResource("4_lr3px")
 [node name="AnimatedMonkey" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -13)
 sprite_frames = SubResource("SpriteFrames_iaowo")
-animation = &"monkey1_typing_1_2"
-autoplay = "monkey1_typing_1_2"
+animation = &"monkey1_typing_2_3"
 
 [node name="AnimatedTypewriter" type="AnimatedSprite2D" parent="AnimatedMonkey"]
 position = Vector2(-4, 3)

@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://hotnvkxdrx8c"]
+[gd_scene load_steps=6 format=3 uid="uid://hotnvkxdrx8c"]
 
 [ext_resource type="Texture2D" uid="uid://l5t2xc4olyxg" path="res://assets/art/sprites/Speed_1.png" id="1_b7mcn"]
 [ext_resource type="Script" path="res://interface/shop_buttons/speed_button.gd" id="2_k6v3i"]
+[ext_resource type="Texture2D" uid="uid://dn17uvwcltbdn" path="res://assets/art/sprites/Speed_1hover.png" id="2_wcwop"]
 [ext_resource type="Texture2D" uid="uid://c5ph2x5p8c0up" path="res://assets/art/sprites/Banana.png" id="3_q1wah"]
 [ext_resource type="AudioStream" uid="uid://cvbidksdgxmdj" path="res://assets/sfx/buy_sound.wav" id="4_4q7bf"]
 
@@ -11,6 +12,7 @@ offset_top = -26.0
 offset_right = 17.0
 offset_bottom = 6.0
 texture_normal = ExtResource("1_b7mcn")
+texture_hover = ExtResource("2_wcwop")
 script = ExtResource("2_k6v3i")
 
 [node name="TextureRect" type="TextureRect" parent="."]

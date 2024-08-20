@@ -28,6 +28,7 @@ func _pressed() -> void:
 
 func level_up():
 	texture_normal = load("res://assets/art/sprites/Auto_2.png")
+	texture_hover = load("res://assets/art/sprites/Auto_2hover.png")
 	price = level_2_price
 	price_label.text = str(price)
 	description_label.text = "Auto 2"
