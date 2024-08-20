@@ -3,7 +3,7 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# Start of game currency
-	Bananas.bananas = 250
+	Bananas.bananas = 200
 
 # Ordering (z index)
 # Monkey = 5
