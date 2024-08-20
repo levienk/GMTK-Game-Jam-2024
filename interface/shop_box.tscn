@@ -1,6 +1,5 @@
-[gd_scene load_steps=8 format=3 uid="uid://b0vc8gf7sdnhx"]
+[gd_scene load_steps=7 format=3 uid="uid://b0vc8gf7sdnhx"]
 
-[ext_resource type="PackedScene" uid="uid://crtew8dttcvtd" path="res://interface/shop_buttons/monkey_button.tscn" id="1_7b1uk"]
 [ext_resource type="Script" path="res://interface/shop_box.gd" id="1_c07bq"]
 [ext_resource type="PackedScene" uid="uid://cfysk3jibfisb" path="res://interface/shop_buttons/auto_move_button.tscn" id="2_7u6el"]
 [ext_resource type="Texture2D" uid="uid://dpcamo5h1ejiw" path="res://assets/art/background/Shop.png" id="2_qntf6"]
@@ -8,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://hotnvkxdrx8c" path="res://interface/shop_buttons/speed_button.tscn" id="4_k3r1t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hwkeb"]
-size = Vector2(360, 216)
+size = Vector2(499, 349)
 
 [node name="ShopBox" type="Area2D"]
 z_index = 12
@@ -16,7 +15,7 @@ position = Vector2(0, 106)
 script = ExtResource("1_c07bq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(180, 2)
+position = Vector2(249.5, 68.5)
 shape = SubResource("RectangleShape2D_hwkeb")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -27,25 +26,19 @@ offset_bottom = 112.0
 texture = ExtResource("2_qntf6")
 
 [node name="AutoMoveButton" parent="." instance=ExtResource("2_7u6el")]
-offset_left = 192.0
-offset_top = 22.0
-offset_right = 224.0
-offset_bottom = 54.0
+offset_left = 400.0
+offset_top = -31.0
+offset_right = 432.0
+offset_bottom = 1.0
 
 [node name="IntellectButton" parent="." instance=ExtResource("3_kj5jh")]
-offset_left = 40.0
-offset_top = 14.0
-offset_right = 72.0
-offset_bottom = 46.0
-
-[node name="MonkeyButton" parent="." instance=ExtResource("1_7b1uk")]
-offset_left = 270.0
-offset_top = -63.0
-offset_right = 291.0
-offset_bottom = -41.0
+offset_left = 237.0
+offset_top = -36.0
+offset_right = 269.0
+offset_bottom = -4.0
 
 [node name="SpeedButton" parent="." instance=ExtResource("4_k3r1t")]
-offset_left = 105.0
-offset_top = -75.0
-offset_right = 137.0
-offset_bottom = -43.0
+offset_left = 87.0
+offset_top = -26.0
+offset_right = 119.0
+offset_bottom = 6.0

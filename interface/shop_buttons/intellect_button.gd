@@ -33,3 +33,5 @@ func level_up():
 	price_label.text = str(price)
 	description_label.text = "Intellect 2"
 	tooltip_text = "4x word chance"
+	$ShortDescription.text = "Pocket Scrabble dictionary"
+	$LongDescription.text = "Of course \"wppwrmwste\" is a word! It says so right here! Through the power of the Scrabble dictionary, even the most profound pile of phonics can become a valid play."

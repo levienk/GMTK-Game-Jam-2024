@@ -33,3 +33,5 @@ func level_up():
 	price_label.text = str(price)
 	description_label.text = "Auto 2"
 	tooltip_text = "Automate quote completion"
+	$ShortDescription.text = "Spellseeker-and-destroyer"
+	$LongDescription.text = "Unfortunately the machine uprising has rendered the need for flesh-creature literature a moot point. Luckily for us, though, they're still willing to make sure all our adjectives are properly ordered."
