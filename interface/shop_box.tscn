@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://d0rijm254wi7t"]
+[gd_scene load_steps=8 format=3 uid="uid://d0rijm254wi7t"]
 
 [ext_resource type="PackedScene" uid="uid://crtew8dttcvtd" path="res://interface/shop_buttons/monkey_button.tscn" id="1_7b1uk"]
 [ext_resource type="Script" path="res://interface/shop_box.gd" id="1_c07bq"]
 [ext_resource type="PackedScene" uid="uid://cfysk3jibfisb" path="res://interface/shop_buttons/auto_move_button.tscn" id="2_7u6el"]
+[ext_resource type="Texture2D" uid="uid://dpcamo5h1ejiw" path="res://assets/art/background/Shop.png" id="2_qntf6"]
 [ext_resource type="PackedScene" uid="uid://b3vvy3yoajmuo" path="res://interface/shop_buttons/intellect_button.tscn" id="3_kj5jh"]
 [ext_resource type="PackedScene" uid="uid://hotnvkxdrx8c" path="res://interface/shop_buttons/speed_button.tscn" id="4_k3r1t"]
 
@@ -10,6 +11,7 @@
 size = Vector2(360, 216)
 
 [node name="ShopBox" type="Area2D"]
+z_index = 12
 position = Vector2(0, 106)
 script = ExtResource("1_c07bq")
 
@@ -17,42 +19,33 @@ script = ExtResource("1_c07bq")
 position = Vector2(180, 2)
 shape = SubResource("RectangleShape2D_hwkeb")
 
-[node name="HFlowContainer" type="HFlowContainer" parent="."]
-custom_minimum_size = Vector2(363, 213)
-offset_top = -53.0
-offset_right = 363.0
-offset_bottom = 160.0
-size_flags_horizontal = 3
-size_flags_vertical = 4
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -1
+offset_top = -106.0
+offset_right = 368.0
+offset_bottom = 112.0
+texture = ExtResource("2_qntf6")
 
-[node name="Spacer" type="Container" parent="HFlowContainer"]
-custom_minimum_size = Vector2(55, 0)
-layout_mode = 2
+[node name="AutoMoveButton" parent="." instance=ExtResource("2_7u6el")]
+offset_left = 192.0
+offset_top = 22.0
+offset_right = 224.0
+offset_bottom = 54.0
 
-[node name="AutoMoveButton" parent="HFlowContainer" instance=ExtResource("2_7u6el")]
-layout_mode = 2
+[node name="IntellectButton" parent="." instance=ExtResource("3_kj5jh")]
+offset_left = 40.0
+offset_top = 14.0
+offset_right = 72.0
+offset_bottom = 46.0
 
-[node name="Spacer3" type="Container" parent="HFlowContainer"]
-custom_minimum_size = Vector2(32, 0)
-layout_mode = 2
+[node name="MonkeyButton" parent="." instance=ExtResource("1_7b1uk")]
+offset_left = 272.0
+offset_top = -58.0
+offset_right = 293.0
+offset_bottom = -26.0
 
-[node name="IntellectButton" parent="HFlowContainer" instance=ExtResource("3_kj5jh")]
-layout_mode = 2
-
-[node name="Spacer4" type="Container" parent="HFlowContainer"]
-custom_minimum_size = Vector2(32, 0)
-layout_mode = 2
-
-[node name="SpeedButton" parent="HFlowContainer" instance=ExtResource("4_k3r1t")]
-layout_mode = 2
-
-[node name="Spacer5" type="Container" parent="HFlowContainer"]
-custom_minimum_size = Vector2(32, 0)
-layout_mode = 2
-
-[node name="MonkeyButton" parent="HFlowContainer" instance=ExtResource("1_7b1uk")]
-layout_mode = 2
-
-[node name="Spacer2" type="Container" parent="HFlowContainer"]
-custom_minimum_size = Vector2(32, 0)
-layout_mode = 2
+[node name="SpeedButton" parent="." instance=ExtResource("4_k3r1t")]
+offset_left = 105.0
+offset_top = -75.0
+offset_right = 137.0
+offset_bottom = -43.0

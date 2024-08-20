@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://yswp1x6mlj2a" path="res://word_bank.tscn" id="7_x0vgp"]
 [ext_resource type="PackedScene" uid="uid://b3vvy3yoajmuo" path="res://interface/shop_buttons/intellect_button.tscn" id="7_xh8kw"]
 [ext_resource type="PackedScene" uid="uid://hotnvkxdrx8c" path="res://interface/shop_buttons/speed_button.tscn" id="7_xqb2u"]
-[ext_resource type="PackedScene" path="res://interface/shop_box.tscn" id="13_vnt6t"]
+[ext_resource type="PackedScene" uid="uid://d0rijm254wi7t" path="res://interface/shop_box.tscn" id="13_vnt6t"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_56afu")
