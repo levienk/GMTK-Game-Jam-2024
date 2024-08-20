@@ -10,6 +10,7 @@ signal new_word_typed(word: String)
 func _ready() -> void:
 	$Timer.stop()
 	SignalBus.word_found.connect(_on_word_found)
+	SignalBus.remove_last_word_found.connect(_on_remove_last_word_found)
 	SignalBus.auto_1_enabled.connect(_on_auto_1_enabled)
 	SignalBus.auto_2_enabled.connect(_on_auto_2_enabled)
 
@@ -21,7 +22,12 @@ func _on_word_found(word: String):
 		if auto_mode:
 			new_word_typed.emit(word)
 			add_bananas(word)
-		words_not_typed.append(word)
+			words_found.append(word)
+		else:
+			words_not_typed.append(word)
+	
+func _on_remove_last_word_found(word: String):
+	words_not_typed.erase(word)
 	
 # When the user has entered a word
 func _input(event: InputEvent) -> void:
@@ -50,8 +56,6 @@ func _on_auto_2_enabled():
 	$Timer.start()
 	
 func _on_timer_timeout() -> void:
-	for word in words_not_typed:
-		SignalBus.send_word_to_quote.emit(word)
 	for word in words_found:
 		SignalBus.send_word_to_quote.emit(word)
 
