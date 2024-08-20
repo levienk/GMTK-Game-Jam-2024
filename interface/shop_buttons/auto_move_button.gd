@@ -12,7 +12,6 @@ var level = 1
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	price_label.text = str(price)
-	tooltip_text = "Automate typing words"
 
 func _pressed() -> void:
 	if Bananas.subtract_score(price) and level == 1:
@@ -32,6 +31,16 @@ func level_up():
 	price = level_2_price
 	price_label.text = str(price)
 	description_label.text = "Auto 2"
-	tooltip_text = "Automate quote completion"
 	$ShortDescription.text = "Spellseeker-and-destroyer"
-	$LongDescription.text = "Unfortunately the machine uprising has rendered the need for flesh-creature literature a moot point. Luckily for us, though, they're still willing to make sure all our adjectives are properly ordered."
+	$LongDescription.text = "Unfortunately the machine uprising has rendered the need for flesh-creature literature a moot point. Luckily for us, though, they're still willing to make sure all our adjectives are properly ordered.\n\nAutomate quote completion"
+	$TextureRect2.texture = load("res://assets/art/sprites/tooltip6.png")
+	
+func _on_mouse_entered() -> void:
+	$Timer.start()
+
+func _on_mouse_exited() -> void:
+	$TextureRect2.visible = false
+	$Timer.stop()
+
+func _on_timer_timeout() -> void:
+	$TextureRect2.visible = true
