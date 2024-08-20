@@ -27,4 +27,4 @@ func level_up():
 	price = level_2_price
 	price_label.text = str(price)
 	description_label.text = "Speed 2"
-	tooltip_text = "4x monkey typing speed"
+	tooltip_text = "4x monkey typing speed (2x valid word speed)"

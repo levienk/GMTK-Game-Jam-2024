@@ -80,7 +80,6 @@ func _on_new_quote_words(words):
 
 func _on_speed_1_enabled():
 	random_time = random_time_const / 2.0
-	valid_time = valid_time_const / 2.0
 	
 func _on_speed_2_enabled():
 	random_time = random_time_const / 2.0
