@@ -1,7 +1,7 @@
 extends Node2D
 
 const random_time_const = 1
-const valid_time_const = 6.0
+const valid_time_const = 5.0
 const valid_word_chance_const = 0.07
 const valid_word_in_quote_chance_const = 0.015
 
