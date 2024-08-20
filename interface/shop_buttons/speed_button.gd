@@ -32,7 +32,7 @@ func level_up():
 	price_label.text = str(price)
 	description_label.text = "Speed 2"
 	$ShortDescription.text = "Lithium-ion batteries"
-	$LongDescription.text = "Some of the finest batteries modern engineering can produce, thrown haphazardly into the mechanical machinations of some monkeys with typewriters. Wouldn't Edison be proud?\n\n4x monkey typing speed (2x valid word speed)"
+	$LongDescription.text = "Some of the finest batteries modern engineering can produce, thrown haphazardly into the mechanical machinations of some monkeys with typewriters. Wouldn't Edison be proud?\n\n4x monkey typing speed (2x valid word decay speed)"
 	$TextureRect2.texture = load("res://assets/art/sprites/tooltip2.png")
 
 func _on_mouse_entered() -> void:

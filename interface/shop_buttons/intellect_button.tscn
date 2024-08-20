@@ -91,7 +91,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 8
 text = "Sure, the monkeys don't know how to read, but maybe the placebo effect of giving them a comprehensive thesaurus will make their incompetent scrawling appear more coherent.
 
-2x word chance"
+2x valid word chance"
 autowrap_mode = 3
 
 [node name="Timer" type="Timer" parent="."]
@@ -100,6 +100,7 @@ one_shot = true
 
 [node name="TextureRect2" type="TextureRect" parent="."]
 visible = false
+layout_mode = 0
 offset_left = 18.0
 offset_top = 23.0
 offset_right = 67.0

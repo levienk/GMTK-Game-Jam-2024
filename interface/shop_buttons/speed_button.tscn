@@ -101,6 +101,7 @@ one_shot = true
 
 [node name="TextureRect2" type="TextureRect" parent="."]
 visible = false
+layout_mode = 0
 offset_left = 18.0
 offset_top = 23.0
 offset_right = 67.0
