@@ -9,6 +9,7 @@ var level = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Bananas.bananas = 700000
 	price_label.text = str(price)
 
 func _pressed() -> void:

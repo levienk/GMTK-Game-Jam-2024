@@ -16,3 +16,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_bnobm")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_ln60j")
 placeholder_text = "Type..."
 script = ExtResource("1_qcjmj")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

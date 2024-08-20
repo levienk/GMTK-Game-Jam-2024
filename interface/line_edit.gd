@@ -8,9 +8,10 @@ signal new_word_typed(word: String)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$Timer.stop()
 	SignalBus.word_found.connect(_on_word_found)
 	SignalBus.auto_1_enabled.connect(_on_auto_1_enabled)
-	#SignalBus.auto_2_enabled.connect(_on_auto_2_enabled)
+	SignalBus.auto_2_enabled.connect(_on_auto_2_enabled)
 
 # Recieve Signal
 func _on_word_found(word: String):
@@ -45,3 +46,11 @@ func _on_auto_1_enabled():
 	editable = false
 	auto_mode = true
 	
+func _on_auto_2_enabled():
+	$Timer.start()
+	
+func _on_timer_timeout() -> void:
+	for word in words_not_typed:
+		SignalBus.send_word_to_quote.emit(word)
+	for word in words_found:
+		SignalBus.send_word_to_quote.emit(word)
