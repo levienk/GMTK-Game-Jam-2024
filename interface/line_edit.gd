@@ -27,7 +27,7 @@ func _on_word_found(word: String):
 			words_not_typed.append(word)
 	else:
 		# Add half points for words that have already been found
-		var points = 5 * word.length()
+		var points = 1 * word.length()
 		Bananas.add_score(points)
 	
 func _on_remove_last_word_found(word: String):
