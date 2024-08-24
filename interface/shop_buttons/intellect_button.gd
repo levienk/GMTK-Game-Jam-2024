@@ -14,12 +14,12 @@ func _ready() -> void:
 	price_label.text = str(price)
 
 func _pressed() -> void:
-	if Bananas.subtract_score(price) and level == 1:
+	if level == 1 and Bananas.subtract_score(price):
 		ka_ching.play()
 		SignalBus.intellect_1_enabled.emit()
-		level += 1
+		level = 2
 		level_up()
-	elif Bananas.subtract_score(price) and level == 2:
+	elif level == 2 and Bananas.subtract_score(price):
 		ka_ching.play()
 		SignalBus.intellect_2_enabled.emit()
 		modulate.a = .5

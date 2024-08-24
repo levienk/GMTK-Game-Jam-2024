@@ -65,7 +65,6 @@ func get_new_quote():
 	# Remove doubles of words from word_list
 	word_list = array_unique(word_list)
 	word_list.erase("")
-	print(word_list)
 	
 	# Update Monkey quote_word_list
 	SignalBus.new_quote_words.emit(word_list)

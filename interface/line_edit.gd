@@ -46,9 +46,6 @@ func _input(event: InputEvent) -> void:
 			words_found.append(text)
 			new_word_typed.emit(text)
 		clear()
-		# Test
-		print(words_found)
-		print(words_not_typed)
 
 func _on_auto_1_enabled():
 	clear()

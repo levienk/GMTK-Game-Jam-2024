@@ -53,8 +53,9 @@ func _ready() -> void:
 	#animated_monkey.play(animations[0])
 
 func _on_timer_timeout() -> void:
-	SignalBus.remove_last_word_found.emit(previous_valid_word)
 	timer.stop()
+	if random_word == previous_valid_word:
+		SignalBus.remove_last_word_found.emit(previous_valid_word)
 	random_word = ""
 	var rand = randf()
 	
